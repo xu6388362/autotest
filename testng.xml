@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" >
+	<parameter name="driver" value="FirefoxDriver" />
+	<parameter name="nodeURL" value="" />
+	<parameter name="Base_Url" value="http://shenzhen.call.hk515.com" />
+	<parameter name="UserName" value="hljadmin" />
+	<parameter name="PassWord" value="111111" />
+	<parameter name="Recipients" value="609958331@qq.com" />
+	<listeners>
+        <listener class-name="org.webdriver.patatiumwebui.utils.TestListener"></listener>
+        <listener class-name="org.webdriver.patatiumwebui.utils.TestReport"></listener>
+    </listeners>
+     <test name="登录功能">
+    <classes>
+      <class name="LoginTest">
+      	     <methods >
+                   <include name="login" />
+                   <include name="layout" />
+             </methods>
+       </class>
+    </classes>
+  </test> <!-- Test -->
+    <test name="主页菜单">
+    <classes>
+      <class name="HomePageTest">
+      	     <methods >
+                   <include name="checkAppiont_memue" />
+                   <include name="checkAccount_management" />
+                   <include name="checkViewAppointmentDetail" />
+                   <include name="checkQueryConsultation" />
+                   <include name="checkQueryCustomerWork" />
+                   <include name="checkQueryMessagePage" />
+             </methods>
+       </class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
