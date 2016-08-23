@@ -21,22 +21,22 @@ import java.util.List;
  */
 public class TestListener  extends TestListenerAdapter{
 	Log log=new Log(this.getClass());
-	//Boolean flag=Assertion.flag;
-	public static StringBuffer sb=new StringBuffer("<?xml version=\"1.0\" encoding=\"GBK\"?>\n<failed>\n");
+	//输出失败结果详情
+	public static StringBuffer sb=new StringBuffer("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<failed>\n");
 	String path="test-output\\failed.xml";
 	File file=new File(path);
-
 	FileWriter fileWriter=null;
 	//输出成功结果详细信息
-	public static StringBuffer sb2=new StringBuffer("<?xml version=\"1.0\" encoding=\"GBK\"?>\n<passed>\n");
+	public static StringBuffer sb2=new StringBuffer("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<passed>\n");
 	String path2="test-output\\passed.xml";
 	File file2=new File(path2);
 	FileWriter fileWriter2=null;
+	FileManger fileManger=new FileManger();
 	@Override
 	public void onTestStart(ITestResult  tr)
 	{
 		//tr.getTestContext()
-		//获取test方法描述Description值
+		//方法开始前初始化报表描述信息
 		Assertion.errors.clear();
 		Assertion.errorIndex=0;
 		Assertion.messageList.clear();
@@ -54,11 +54,6 @@ public class TestListener  extends TestListenerAdapter{
 		screenShot.setscreenName(tr.getMethod().getDescription()+Assertion.errorIndex.toString());
 		log.error(Assertion.errorIndex.toString());
 		screenShot.takeScreenshot();
-		if(file.exists())
-		{
-			file.delete();;
-		}
-
 		for(int i=0;i<Assertion.messageList.size();i++)
 		{
 			if (tr.getParameters().length>0) {
@@ -121,18 +116,26 @@ public class TestListener  extends TestListenerAdapter{
 
 
 		}
-		try {
+		/*try {
+			if(file.exists())
+			{
+				file.delete();
+			}
 			fileWriter=new FileWriter(file, true);
 			BufferedWriter output = new BufferedWriter(fileWriter);
-			output.write(sb.toString());
-			output.write("</failed>");
+			output.write(sb.toString()+"</failed>");
+			//output.write("</failed>");
 			output.flush();
 			output.close();
 		} catch (IOException e1) {
 			// TODO 自动生成的 catch 块
 			e1.printStackTrace();
+		}*/
+		if(file.exists())
+		{
+			file.delete();;
 		}
-
+		fileManger.writeWithEncode(file,"utf-8",true,sb.toString()+"</failed>");
 		// log.error(sb.toString());
 		//this.handAssertion(tr);
 		log.error("测试用例: "+tr.getMethod().getDescription()+"--failed");
@@ -152,10 +155,6 @@ public class TestListener  extends TestListenerAdapter{
 
 	@Override
 	public void onTestSuccess(ITestResult tr) {
-		if(file2.exists())
-		{
-			file2.delete();;
-		}
 		for(int i=0;i<Assertion.messageList.size();i++)
 		{
 			if (tr.getParameters().length>0) {
@@ -168,17 +167,28 @@ public class TestListener  extends TestListenerAdapter{
 
 			sb2.append("</pass_assert_info>\n");
 		}
-		try {
-			fileWriter2=new FileWriter(file2, true);
-			BufferedWriter output = new BufferedWriter(fileWriter2);
-			output.write(sb2.toString());
-			output.write("</passed>");
-			output.flush();
-			output.close();
+		/*try {
+			//fileWriter2=new FileWriter(file2, true);
+			if(file2.exists())
+			{
+				file2.delete();;
+			}
+			//fileWriter2=new FileWriter(file2);
+			//BufferedWriter output = new BufferedWriter(fileWriter2);
+			//output.write(sb2.toString()+"</passed>");
+			//output.write("</passed>");
+			//output.flush();
+			//output.close();
+
 		} catch (IOException e2) {
 			// TODO 自动生成的 catch 块
 			e2.printStackTrace();
+		}*/
+		if(file2.exists())
+		{
+			file2.delete();;
 		}
+		fileManger.writeWithEncode(file2,"utf-8",true,sb2.toString()+"</passed>");
 		log.info("测试用例: "+tr.getMethod().getDescription()+"--passed");
 		log.info("测试用例:"+tr.getMethod().getDescription()+"---end");
 

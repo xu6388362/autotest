@@ -14,7 +14,7 @@ import org.dom4j.io.XMLWriter;
 
 
 public class Config {
-	public static String path="E:\\autotest\\hk_kf_autotest\\case\\testng.xml";
+	public static String path="testng.xml";
 	public static void main(String[] args) {
 		// TODO 自动生成的方法存根
 

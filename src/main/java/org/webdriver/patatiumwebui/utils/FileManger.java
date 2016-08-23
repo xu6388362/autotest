@@ -1,6 +1,6 @@
 package org.webdriver.patatiumwebui.utils;
 
-import java.io.File;
+import java.io.*;
 
 public class FileManger {
 
@@ -31,6 +31,50 @@ public class FileManger {
 		}
 
 	}
+
+    /**
+     *
+     * @param path 写入文件目标路径
+     * @param encode 写入文件编码
+     * @param append 是否文本追加模式
+     * @param content 写入文本
+     */
+	public void writeWithEncode(String path,String encode,boolean append,String content)
+	{
+		File file=new File(path);
+		if (file.exists())
+		{
+			file.delete();
+		}
+		try {
+			file.createNewFile();
+            BufferedWriter bufferedWriter=new BufferedWriter(new OutputStreamWriter( new FileOutputStream(file,append),encode));
+            bufferedWriter.write(content);
+            bufferedWriter.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+    /**
+     *
+     * @param file 写入文件文件
+     * @param encode 写入文件编码
+     * @param append 是否文本追加模式
+     * @param content 写入文本
+     */
+    public void writeWithEncode(File file,String encode,boolean append,String content)
+    {
+        try {
+            file.createNewFile();
+            BufferedWriter bufferedWriter=new BufferedWriter(new OutputStreamWriter( new FileOutputStream(file,append),encode));
+            bufferedWriter.write(content);
+            bufferedWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
 
 
 	public static void main(String[] args) {

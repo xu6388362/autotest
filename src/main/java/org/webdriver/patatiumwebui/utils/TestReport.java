@@ -89,7 +89,7 @@ public class TestReport implements IReporter{
 		ArrayList<ITestResult> failedArrayList=new ArrayList<ITestResult>();
 		ArrayList<ITestResult> skipArrayList=new ArrayList<ITestResult>();
 		try {
-			BufferedWriter output = new BufferedWriter(new FileWriter(new File(path)));
+			//BufferedWriter output = new BufferedWriter(new FileWriter(new File(path)));
 			StringBuffer sb = new StringBuffer();
 			for (ITestResult result : fullResults) {
 				if(result.getStatus()==1)
@@ -107,7 +107,7 @@ public class TestReport implements IReporter{
 			}
 			sb.append("<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">");
 			sb.append("<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n");
-			sb.append("<meta http-equiv=\"Content-Type\"content=\"text/html; charset=GBK\" />\n");
+			sb.append("<meta http-equiv=\"Content-Type\"content=\"text/html; charset=utf-8\" />\n");
 			sb.append("<title>深圳客服后台测试报告</title>\n");
 			sb.append("<link href=\"report.css\" rel=\"stylesheet\" type=\"text/css\"/>\n");
 			sb.append("<link href=\"imageshow.css\" rel=\"stylesheet\" type=\"text/css\"/>\n");
@@ -507,7 +507,6 @@ public class TestReport implements IReporter{
 			sb.append("<td width=\"20%\" class=\"case_result_beizhu_td\">备注</td>\n");
 			sb.append("<td width=\"10%\" class=\"case_time\">耗时</td>\n");
 			sb.append("</tr>\n");
-			//for (ITestResult failedresult : failedArrayList)
 			for (int j = 0; j < failedArrayList.size(); j++)
 			{
 				if(sb.length()!=0){
@@ -568,9 +567,11 @@ public class TestReport implements IReporter{
 					+"<span style=\"font-size:14px;margin-top:5px\" >温馨提示：点击按钮展开详情</span>"
 					+ "<div id=\"footer\" >技术支持：技术部测试组 郑树恒</div>");
 			sb.append("</body>\n</html>\n");
-			output.write(sb.toString());
+			/*output.write(sb.toString());
 			output.flush();
-			output.close();
+			output.close();*/
+			FileManger fileManger=new FileManger();
+			fileManger.writeWithEncode(path,"utf-8",true,sb.toString());
 
 
 
