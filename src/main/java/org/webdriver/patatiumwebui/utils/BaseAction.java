@@ -10,6 +10,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 
+/**
+ *
+ */
 public class BaseAction extends TestBaseCase{
 
 	//protected 只在本包之内有权限，可访问
