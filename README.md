@@ -1,5 +1,5 @@
 #PatatiumWebUi
- **该web自动化测试框架是用java语言编写的，基于selenium webdriver 开源自动化测试工具编写的，结合了testng 等工具。该框架实现了关键字驱动技术，无需掌握多少编程知识即可编写脚本，同时实现了数据与代码分离的功能：1、元素定位信息保存在对象库文件中 2、测试用例数据可以存储在excel中。从而实现，页面元素位置变化，无需改动脚本，只需修改对应的元素定位信息即可。
+ **该web自动化测试框架是用java语言编写的，基于selenium webdriver 开源自动化测试工具编写的，结合了testng 等工具。该框架基于页面对象模型（POM）模型架构，实现了关键字驱动技术，数据驱动,无需掌握多少编程知识即可编写脚本，同时实现了数据与代码分离的功能：1、元素定位信息保存在对象库文件中 2、测试用例数据可以存储在excel中。从而实现，页面元素位置变化，无需改动脚本，只需修改对应的元素定位信息即可。
 目前框架还不是特别完善，还需要写一些脚本实现自动化；学习该框架需要熟悉一定的HTML 和java基础，后续可以考虑自动编码的实现。** 
 
 首先给大家展示一下用该框架编写的一个简单的自动化用例脚本。
@@ -40,7 +40,7 @@ Value：页面对象的URL，可不填
 Desc:页面对象中文描述
 
 
-第二步：运行PageObjectAutoCodeForJar类，把xml对象库转化为java文件对象库
+第二步：运行PageObjectAutoCode类，把xml对象库转化为java文件对象库（自动按页面生成页面对象类文件存放在PageObject包下）
 
 
 第三步：编写测试脚本。具体步骤如下
@@ -77,8 +77,8 @@ Desc:页面对象中文描述
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite" parallel="none">
 	<parameter name="driver" value="FirefoxDriver"></parameter>---设置浏览器类型
-	<parameter name="nodeURL" value=""></parameter>---设置运行浏览器的机器IP地址
-    //项目URL
+	<parameter name="nodeURL" value=""></parameter>---selenium grid分布式运行用例节点ip地址，如果不采用grid分布式运行，此参数设置为空
+         //项目URL
 	<parameter name="Base_Url" value="http://shenzhen.call.hk515.com/login/login"></parameter>
 	<parameter name="UserName" value="hljadmin"></parameter>--项目登录的用户名
 	<parameter name="PassWord" value="111111"></parameter>---项目登录的密码
