@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="a308bcbb-44f6-48d0-9629-fd94a752c4c4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/webdriver/patatiumwebui/utils/HttpRequestUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/webdriver/patatiumwebui/utils/Result.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/webdriver/patatiumwebui/utils/TimeUtil.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/org/webdriver/patatiumwebui/utils/HttpRequest.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PatatiumWebUi.iml" afterPath="$PROJECT_DIR$/PatatiumWebUi.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="patatiumwebui.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -868,7 +861,7 @@
       <workItem from="1471836834346" duration="545000" />
       <workItem from="1471837398333" duration="11533000" />
       <workItem from="1471962504239" duration="2012000" />
-      <workItem from="1472391640926" duration="3161000" />
+      <workItem from="1472391640926" duration="3192000" />
     </task>
     <task id="LOCAL-00001" summary="更新监听器，fileManger类增加写文件指定编码的方法">
       <created>1472391762665</created>
@@ -877,7 +870,14 @@
       <option name="project" value="LOCAL" />
       <updated>1472391762665</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="更新监听器，fileManger类增加写文件指定编码的方法">
+      <created>1472394816303</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1472394816303</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -898,7 +898,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17251000" />
+    <option name="totallyTimeSpent" value="17282000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
