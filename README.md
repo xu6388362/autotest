@@ -180,7 +180,7 @@ Jenkins：1、checkout 项目代码 2、指定pom.xml文件  3、执行mvn clean
 例如：//label[@class='col-sm-2 control-label' and @for='userName'] 在定位中，如果一个属性还不能精确定位某个元素那么则可以再组合增加一个元素，使定位达到唯一性
 Text（）：通过元素的文本值查找元素，例：//h2[text()='webdriver中文社区']
 Contains();//input[contains(@id,'nt')] 模糊匹配，查找id包含nt的input标签
-//h2[contains(text(),'华康移动医疗客服后台')] 查找文本值包含webdriver中文社区的元素
+//h2[contains(text(),'webdriver中文社区')] 查找文本值包含webdriver中文社区的元素
 //灵活使用案例：
 查找元素
 ```
