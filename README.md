@@ -210,6 +210,6 @@ Contains();//input[contains(@id,'nt')] 模糊匹配，查找id包含nt的input�
 
 <h1>如果您觉得这个产品对您有用，您可以捐助下我，让我有理由继续下去，非常感谢。<h1>
 ![输入图片说明](http://git.oschina.net/uploads/images/2016/0829/143544_90f3759f_482055.png "在这里输入图片标题")
-现在微信捐助无法得知捐助人昵称，欢迎添加我的个人微信:zhengshuheng002
 您也可以加入webdriver中文社区交流QQ群： 471137382，欢迎给我提建议和bug。
 或者给我邮件：609958331@qq.com
+现在微信捐助无法得知捐助人昵称，欢迎添加我的个人微信:zhengshuheng002
