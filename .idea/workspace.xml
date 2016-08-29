@@ -2,81 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="a308bcbb-44f6-48d0-9629-fd94a752c4c4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_nodep_2_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_beust_jcommander_1_48.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_16_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_inject_guice_no_aop_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_3_5_7_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_mail_mail_1_5_0_b01.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_java_dev_jna_jna_4_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_java_dev_jna_jna_platform_4_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_cssparser_cssparser_0_9_18.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_htmlunit_htmlunit_2_21.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_htmlunit_htmlunit_core_js_2_17.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_htmlunit_neko_htmlunit_2_21.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_jexcelapi_jxl_2_6_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_1_7_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_launcher_1_7_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_exec_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_5_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_beanshell_bsh_2_0b4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_io_9_2_15_v20160210.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_9_2_15_v20160210.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_api_9_2_15_v20160210.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_client_9_2_15_v20160210.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_common_9_2_15_v20160210.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jodd_jodd_core_3_7_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jodd_jodd_http_3_7_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jodd_jodd_upload_3_7_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20160810.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_htmlunit_driver_2_21.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_api_2_53_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_chrome_driver_2_53_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_edge_driver_2_53_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_firefox_driver_2_53_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_ie_driver_2_53_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_java_2_53_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_leg_rc_2_53_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_remote_driver_2_53_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_safari_driver_2_53_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_support_2_53_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_testng_testng_6_9_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_w3c_css_sac_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_15.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xalan_serializer_2_7_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xalan_xalan_2_7_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xerces_xercesImpl_2_11_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_4_01.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/AccountMangerTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/AppointmentDetailTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/AppointmentTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/HomePageTest.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/reportResources/logo1.png" afterPath="$PROJECT_DIR$/src/main/resources/reportResources/logo1.png" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/data/new_account.xls" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PatatiumWebUi.iml" afterPath="$PROJECT_DIR$/PatatiumWebUi.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/webdriver/patatiumwebui/action/LoginAction.java" afterPath="$PROJECT_DIR$/src/main/java/org/webdriver/patatiumwebui/action/LoginAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/webdriver/patatiumwebui/pageObjectConfig/UILibrary.xml" afterPath="$PROJECT_DIR$/src/main/java/org/webdriver/patatiumwebui/pageObjectConfig/UILibrary.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/webdriver/patatiumwebui/utils/TestReport.java" afterPath="$PROJECT_DIR$/src/main/java/org/webdriver/patatiumwebui/utils/TestReport.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/webdriver/patatiumwebui/utils/XmlReadUtil.java" afterPath="$PROJECT_DIR$/src/main/java/org/webdriver/patatiumwebui/utils/XmlReadUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/LoginTest.java" afterPath="$PROJECT_DIR$/src/test/java/LoginTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testng.xml" afterPath="$PROJECT_DIR$/testng.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/data/hospital_list.xls" afterPath="$PROJECT_DIR$/src/main/resources/data/loginData.xls" />
     </list>
     <ignored path="patatiumwebui.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -104,17 +31,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
               <caret line="3" column="77" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="77" />
-              <folding>
-                <element signature="n#listeners#0;n#suite#0;n#!!top" expanded="true" />
-                <element signature="n#test#0;n#suite#0;n#!!top" expanded="true" />
-                <element signature="n#classes#0;n#test#0;n#suite#0;n#!!top" expanded="true" />
-                <element signature="n#class#0;n#classes#0;n#test#0;n#suite#0;n#!!top" expanded="true" />
-                <element signature="n#methods#0;n#class#0;n#classes#0;n#test#0;n#suite#0;n#!!top" expanded="true" />
-                <element signature="n#test#1;n#suite#0;n#!!top" expanded="true" />
-                <element signature="n#classes#0;n#test#1;n#suite#0;n#!!top" expanded="true" />
-                <element signature="n#class#0;n#classes#0;n#test#1;n#suite#0;n#!!top" expanded="true" />
-                <element signature="n#methods#0;n#class#0;n#classes#0;n#test#1;n#suite#0;n#!!top" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -178,7 +95,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/LoginTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="481">
-              <caret line="60" column="17" selection-start-line="39" selection-start-column="4" selection-end-line="60" selection-end-column="17" />
+              <caret line="60" column="17" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -415,6 +332,62 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reportResources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PatatiumWebUi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PatatiumWebUi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PatatiumWebUi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PatatiumWebUi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -445,7 +418,9 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="svn" revision="57">E:\autotest\hk_webtest\PatatiumWebUi\README.md</PATH>
+          <PATH vcs="svn" revision="64">E:\autotest\hk_webtest\PatatiumWebUi\README.md</PATH>
+          <PATH vcs="svn" revision="64">E:\autotest\hk_webtest\PatatiumWebUi\src\test\java\LoginTest.java</PATH>
+          <PATH vcs="svn" revision="64">E:\autotest\hk_webtest\PatatiumWebUi\testng.xml</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -1072,7 +1047,7 @@
       <workItem from="1471837398333" duration="11533000" />
       <workItem from="1471962504239" duration="2012000" />
       <workItem from="1472391640926" duration="5293000" />
-      <workItem from="1472435249676" duration="13121000" />
+      <workItem from="1472435249676" duration="14269000" />
     </task>
     <task id="LOCAL-00001" summary="更新监听器，fileManger类增加写文件指定编码的方法">
       <created>1472391762665</created>
@@ -1109,7 +1084,14 @@
       <option name="project" value="LOCAL" />
       <updated>1472435275458</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="登录类">
+      <created>1472453209790</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1472453209790</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1145,7 +1127,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32504000" />
+    <option name="totallyTimeSpent" value="33652000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -1156,9 +1138,9 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5042644" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5042644" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329294" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32900432" sideWeight="0.49573562" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.49573562" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3181818" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1479,7 +1461,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/LoginTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="481">
-          <caret line="60" column="17" selection-start-line="39" selection-start-column="4" selection-end-line="60" selection-end-column="17" />
+          <caret line="60" column="17" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1490,17 +1472,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="3" column="77" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="77" />
-          <folding>
-            <element signature="n#listeners#0;n#suite#0;n#!!top" expanded="true" />
-            <element signature="n#test#0;n#suite#0;n#!!top" expanded="true" />
-            <element signature="n#classes#0;n#test#0;n#suite#0;n#!!top" expanded="true" />
-            <element signature="n#class#0;n#classes#0;n#test#0;n#suite#0;n#!!top" expanded="true" />
-            <element signature="n#methods#0;n#class#0;n#classes#0;n#test#0;n#suite#0;n#!!top" expanded="true" />
-            <element signature="n#test#1;n#suite#0;n#!!top" expanded="true" />
-            <element signature="n#classes#0;n#test#1;n#suite#0;n#!!top" expanded="true" />
-            <element signature="n#class#0;n#classes#0;n#test#1;n#suite#0;n#!!top" expanded="true" />
-            <element signature="n#methods#0;n#class#0;n#classes#0;n#test#1;n#suite#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
