@@ -5,7 +5,7 @@
 
 <h1>Demo演示</h1>
 <p>具体在代码在src/test/java目录下</p>
-<h2>公共action封装实例（业务操作）</h2>
+<h2>1、公共action封装实例（业务操作）</h2>
 ```
 package org.webdriver.patatiumwebui.action;
 
