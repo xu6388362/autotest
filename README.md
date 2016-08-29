@@ -151,6 +151,11 @@ public class LoginAction extends TestBaseCase{
 
 ```
 testng.xml放在项目根目录下面。
+<h2>6、执行用例</h2>
+IDE：在IDE集成开发环境下右键testng.xml使用testng运行
+Maven:执行mvn clean ;mvn test 命令
+Jenkins：1、checkout 项目代码 2、指定pom.xml文件  3、执行mvn clean ;mvn test 命令
+
 下面给大家简单讲解下，该框架的使用。（使用该框架之前首先要做的是环境搭建，环境搭建比较简单，在此就不介绍了）
 
 第一步：创建XML对象库（编写xml对象库文件）
