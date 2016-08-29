@@ -80,6 +80,50 @@ public class LoginAction extends TestBaseCase{
 	}
 	//数据驱动案例--end
 ```
+<h2>4、testng.xml配置</h2>
+```
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" >
+	<parameter name="driver" value="FirefoxDriver" /> <!--测试浏览器：支持火狐，谷歌，IE-->
+	<parameter name="nodeURL" value="" /> <!--selenium grid分布式运行node节点url，如不用分布式运行，则留空-->
+	<parameter name="BaseUrl" value="https://passport.jd.com" />  <!-- 测试系统基础Url-->
+	<parameter name="UserName" value="" /> <!-- 系统登录用户名-->
+	<parameter name="PassWord" value="" />  <!-- 系统登录密码-->
+    <parameter name="smtpUserName" value="zhengshuheng@hk515.com" />  <!-- 测试报告邮件发送：smtp身份证验证-->
+    <parameter name="smtpPassWord" value="zheng@159791" />  <!-- 测试报告邮件发送：smtp身份证验证-->
+    <parameter name="smtpHost" value="smtp.hk515.com" />  <!-- 测试报告邮件发送：smtp主机地址-->
+    <parameter name="smtpPort" value="25" />  <!-- 测试报告邮件发送：smtp主机端口-->
+    <parameter name="mailTitle" value="Webdriver中文社区-自动化测试报告" />  <!-- 测试报告邮件发送：邮件标题-->
+    <parameter name="logUrl" value="" />  <!-- 测试报告邮件发送：用例运行日志url-->
+    <parameter name="reportUrl" value="" />  <!-- 测试报告邮件发送：完整测试报告url-->
+	<parameter name="recipients" value="609958331@qq.com" /> <!-- 测试报告邮件发送：收件人，多个用,号隔开-->
+    <parameter name="reportTitle" value="Webdriver中文社区-自动化测试报告" />  <!--测试报告标题-->
+	<listeners><!-- 监听器设置-->
+        <listener class-name="org.webdriver.patatiumwebui.utils.TestListener"></listener>
+        <listener class-name="org.webdriver.patatiumwebui.utils.TestReport"></listener>
+    </listeners>
+     <test name="登录失败测试用例：数据驱动"> <!-- 测试用例描述-->
+    <classes>
+      <class name="LoginTest">
+      	     <methods >
+                   <include name="loginFail" />
+             </methods>
+       </class>
+    </classes>
+  </test> <!-- Test -->
+    <test name="登录成功测试用例">
+        <classes>
+            <class name="LoginTest">
+                <methods >
+                    <include name="login" />
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->
+
+```
 下面给大家简单讲解下，该框架的使用。（使用该框架之前首先要做的是环境搭建，环境搭建比较简单，在此就不介绍了）
 
 第一步：创建XML对象库（编写xml对象库文件）
