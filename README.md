@@ -155,6 +155,11 @@ testng.xml放在项目根目录下面。
 IDE：在IDE集成开发环境下右键testng.xml使用testng运行
 Maven:执行mvn clean ;mvn test 命令
 Jenkins：1、checkout 项目代码 2、指定pom.xml文件  3、执行mvn clean ;mvn test 命令
+<h2>7、查看测试报告及日志文件</h2>
+用例执行完毕，会自动发送邮件报告及生成测试报告文件
+测试报告文件生成在项目根目录下test-out目录下report.html文件
+报告展示如下：
+![输入图片说明](http://git.oschina.net/uploads/images/2016/0829/135306_b9ddfe80_482055.jpeg "在这里输入图片标题")
 
 下面给大家简单讲解下，该框架的使用。（使用该框架之前首先要做的是环境搭建，环境搭建比较简单，在此就不介绍了）
 
