@@ -74,8 +74,8 @@ public class LoginAction extends TestBaseCase{
 	@Parameters({"BaseUrl"})//读取testng.xml参数
 	public void login(String BaseUrl) throws IOException
 	{
-		//调用登录方法，输入正确的用户名和密码
-		LoginAction loginAction=new LoginAction(BaseUrl+"/new/login.aspx","13026696420","zheng15970066750");
+		//调用登录方法，需输入正确的用户名和密码
+		LoginAction loginAction=new LoginAction(BaseUrl+"/new/login.aspx","11111","abc123");
 		action.sleep(2);
 		//设置检查点
 		Assertion.VerityTextPresentPrecision("jd_8456195","输入正确的用户名和密码，验证是否成功进入主页");
@@ -119,14 +119,14 @@ public class LoginAction extends TestBaseCase{
 	<parameter name="BaseUrl" value="https://passport.jd.com" />  <!-- 测试系统基础Url-->
 	<parameter name="UserName" value="" /> <!-- 系统登录用户名-->
 	<parameter name="PassWord" value="" />  <!-- 系统登录密码-->
-    <parameter name="smtpUserName" value="zhengshuheng@hk515.com" />  <!-- 测试报告邮件发送：smtp身份证验证-->
-    <parameter name="smtpPassWord" value="zheng@159791" />  <!-- 测试报告邮件发送：smtp身份证验证-->
-    <parameter name="smtpHost" value="smtp.hk515.com" />  <!-- 测试报告邮件发送：smtp主机地址-->
-    <parameter name="smtpPort" value="25" />  <!-- 测试报告邮件发送：smtp主机端口-->
+    <parameter name="smtpUserName" value="" />  <!-- 测试报告邮件发送：smtp身份证验证-->
+    <parameter name="smtpPassWord" value="" />  <!-- 测试报告邮件发送：smtp身份证验证-->
+    <parameter name="smtpHost" value="" />  <!-- 测试报告邮件发送：smtp主机地址-->
+    <parameter name="smtpPort" value="" />  <!-- 测试报告邮件发送：smtp主机端口-->
     <parameter name="mailTitle" value="Webdriver中文社区-自动化测试报告" />  <!-- 测试报告邮件发送：邮件标题-->
     <parameter name="logUrl" value="" />  <!-- 测试报告邮件发送：用例运行日志url-->
     <parameter name="reportUrl" value="" />  <!-- 测试报告邮件发送：完整测试报告url-->
-	<parameter name="recipients" value="609958331@qq.com" /> <!-- 测试报告邮件发送：收件人，多个用,号隔开-->
+	<parameter name="recipients" value="" /> <!-- 测试报告邮件发送：收件人，多个用,号隔开-->
     <parameter name="reportTitle" value="Webdriver中文社区-自动化测试报告" />  <!--测试报告标题-->
 	<listeners><!-- 监听器设置-->
         <listener class-name="org.webdriver.patatiumwebui.utils.TestListener"></listener>
