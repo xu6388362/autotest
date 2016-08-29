@@ -105,10 +105,18 @@ public class TestReport implements IReporter{
 					skipArrayList.add(result);
 				}
 			}
+			String reportTitle="";
+			try {
+				reportTitle=getTestngParametersValue(Config.path,"reportTitle");
+			} catch (DocumentException e) {
+				e.printStackTrace();
+			}
 			sb.append("<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">");
 			sb.append("<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n");
 			sb.append("<meta http-equiv=\"Content-Type\"content=\"text/html; charset=utf-8\" />\n");
-			sb.append("<title>深圳客服后台测试报告</title>\n");
+			sb.append("<title>" +
+					reportTitle +
+					"</title>\n");
 			sb.append("<link href=\"report.css\" rel=\"stylesheet\" type=\"text/css\"/>\n");
 			sb.append("<link href=\"imageshow.css\" rel=\"stylesheet\" type=\"text/css\"/>\n");
 			sb.append("<script type=\"text/javascript\" src=\"jquery-1.7.1.min.js\"></script>\n ");
@@ -223,7 +231,9 @@ public class TestReport implements IReporter{
 			sb.append("</div>");
 			sb.append("<div  id=\"header_right\" >\n");
 			sb.append("<div id=\"title\">\n");
-			sb.append("<div>深圳客服后台自动化测试报告</div>\n");
+			sb.append("<div>" +
+					reportTitle +
+					"</div>\n");
 			sb.append("</div>\n");
 			sb.append("<div id=\"canvas_div\"><canvas id=\"canvas\" height=\"90\" width=\"90\"></canvas>\n</div>"
 					+ "</div>\n");
@@ -565,7 +575,7 @@ public class TestReport implements IReporter{
 			sb.append("</table>\n</div>\n");
 			sb.append("</div>\n"
 					+"<span style=\"font-size:14px;margin-top:5px\" >温馨提示：点击按钮展开详情</span>"
-					+ "<div id=\"footer\" >技术支持：技术部测试组 郑树恒</div>");
+					+ "<div id=\"footer\" >技术支持：Copyright © 2014 Webdriver中文社区.Inc</div>");
 			sb.append("</body>\n</html>\n");
 			/*output.write(sb.toString());
 			output.flush();
@@ -582,9 +592,9 @@ public class TestReport implements IReporter{
 			String logUrl=null;//日志url
 			String Recipients=null; //邮件收件人地址
 			try {
-				reportUrl=getTestngParametersValue(Config.path, "ReportUrl");
-				logUrl=getTestngParametersValue(Config.path, "LogUrl");
-				Recipients=getTestngParametersValue(Config.path, "Recipients");
+				reportUrl=getTestngParametersValue(Config.path, "reportUrl");
+				logUrl=getTestngParametersValue(Config.path, "logUrl");
+				Recipients=getTestngParametersValue(Config.path, "recipients");
 			} catch (DocumentException e) {
 				// TODO 自动生成的 catch 块
 				e.printStackTrace();
@@ -596,7 +606,9 @@ public class TestReport implements IReporter{
 			sb2.append("<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">");
 			sb2.append("<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n");
 			sb2.append("<meta http-equiv=\"Content-Type\"content=\"text/html; charset=gbk\" />\n");
-			sb2.append("<title>深圳客服后台测试报告</title>\n");
+			sb2.append("<title>" +
+					reportTitle +
+					"</title>\n");
 			sb2.append("</head>\n");
 			sb2.append("<body>\n");
 			sb2.append("<div id=\"content\">\n");
@@ -618,7 +630,9 @@ public class TestReport implements IReporter{
 			sb2.append("</div>");
 			sb2.append("<div  id=\"header_right\" >\n");
 			sb2.append("<div id=\"title\">\n");
-			sb2.append("<div style=\"text-align:center\">深圳客服后台自动化测试报告</div>\n");
+			sb2.append("<div style=\"text-align:center\">" +
+					reportTitle +
+					"</div>\n");
 			sb2.append("</div>\n");
 			sb2.append("</div>\n");
 			sb2.append("<div id=\"report_total\">\n");
@@ -837,11 +851,25 @@ public class TestReport implements IReporter{
 			//--跳过结果--end
 			sb2.append("</table>\n</div>\n");
 			sb2.append("</div>\n"
-					+ "<div id=\"footer\" style=\"font-size:14px\" >技术支持：技术部测试组 郑树恒</div>");
+					+ "<div id=\"footer\" style=\"font-size:14px\" >技术支持：Copyright © 2014 Webdriver中文社区.Inc</div>");
 			sb2.append("</body>\n</html>\n");
 			System.out.println("收件人地址："+Recipients);
 			SendMail sendMail=new SendMail();
-			sendMail.sendmessage("zhengshuheng@hk515.com", "zheng@159791", "smtp.hk515.com", "25", "zhengshuheng@hk515.com",Recipients, "华康客服自动化测试报告", sb2.toString());
+			String smtpUserName="";
+			String smtpPassWord="";
+			String smtpHost="";
+			String smtpPort="";
+			String mailTitle="";
+			try {
+				smtpUserName=getTestngParametersValue(Config.path,"smtpUserName");
+				smtpPassWord=getTestngParametersValue(Config.path,"smtpPassWord");
+				smtpHost=getTestngParametersValue(Config.path,"smtpHost");
+				smtpHost=getTestngParametersValue(Config.path,"smtpHost");
+				mailTitle=getTestngParametersValue(Config.path,"mailTitle");
+			} catch (DocumentException e) {
+				e.printStackTrace();
+			}
+			sendMail.sendmessage(smtpUserName,smtpPassWord, smtpHost, smtpPort, smtpUserName,Recipients,mailTitle, sb2.toString());
 			//--发送html报表邮件--结束
 
 

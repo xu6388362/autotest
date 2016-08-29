@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Iterator;
 
+import org.dom4j.DocumentException;
 import org.webdriver.patatiumwebui.utils.Locator.*;
 
 import org.dom4j.Attribute;
@@ -263,6 +264,34 @@ public class XmlReadUtil {
 
 		return URL;
 
+
+	}
+	public static  String getTestngParametersValue(String path,String ParametersName) throws DocumentException, IOException
+	{
+		File file = new File(path);
+		if (!file.exists()) {
+			throw new IOException("Can't find " + path);
+
+		}
+		String value=null;
+		SAXReader reader = new SAXReader();
+		Document  document = reader.read(file);
+		Element root = document.getRootElement();
+		for (Iterator<?> i = root.elementIterator(); i.hasNext();)
+		{
+			Element page = (Element) i.next();
+			if(page.attributeCount()>0)
+			{
+				if (page.attribute(0).getValue().equalsIgnoreCase(ParametersName))
+				{
+					value=page.attribute(1).getValue();
+					//System.out.println(page.attribute(1).getValue());
+				}
+				continue;
+			}
+			//continue;
+		}
+		return value;
 
 	}
 

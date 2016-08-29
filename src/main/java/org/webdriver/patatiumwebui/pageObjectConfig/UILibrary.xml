@@ -1,83 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map>	
-	<page pagename="org.webdriver.patatiumwebui.pageObject.LoginPage" value="http://192.168.0.21:8086/User/Login" desc="华康运营后台登录页面">
-		<locator type="id" timeout="3" value="userName"  desc="用户名">用户名输入框</locator>
-		<locator type="id" timeout="3" value="password"  desc="密码">密码输入框</locator>
-		<locator type="id" timeout="3" value="loginButton"  desc="登录">登录按钮</locator>//a[@href='/password/logout']
+<!--整个对象库文件的根目录，管理整个项目的对象-->
+<map>
+    <!--管理一个页面的元素（webelement：input,select,textare,a,li等标签），一个page包含多个locator对象
+    Pagename:page对象名字，格式：net.hk515.PageObject.xxxPage;最后面那位才是真正的页面名字，前面的是java对象库路径；
+    另外注意，页面名字是头个单词大写；例如主页：名字定义为 net.hk515.PageObject.HomePage
+    Value：页面对象的URL，可不填。
+    Desc:页面对象中文描述-->
+    <page pagename="org.webdriver.patatiumwebui.pageObject.LoginPage" value="" desc="京东登录页面">
+        <!--管理一个页面的元素（webelement：input,select,textare,a,li等标签），一个page包含多个locator对象
+        Type：定位方式，包含id,name,class,linktext,xpath,css等，定位元素的时候灵活使用，一般可以统一用xpath
+        代替id,name,class，linktext的定位方式。
+        Timeout：元素加载时间，有些页面元素，可能要等待一段时间才能加载过来，为了查找元素的稳定性，需加等待时间。
+        Value:元素定位信息，如果是id,name,class，linktext直接把网页元素对应的这些属性值写上即可，如果是xpath定位方式，
+        需要填写正确的xpath语法格式。
+        Desc:元素的描述，元素的中文描述信息-->
+		<locator type="xpath" timeout="3" value="//input[@id='loginname']"  desc="用户名">用户名输入框</locator>
+		<locator type="id" timeout="3" value="nloginpwd"  desc="密码">密码输入框</locator>
+		<locator type="id" timeout="3" value="loginsubmit"  desc="登录">登录按钮</locator>
 	</page>
-	<page pagename="org.webdriver.patatiumwebui.pageObject.HomePage" value="" desc="客服后台主页">
-		<locator type="linkText" timeout="3" value="预约挂号" desc="预约挂号">appiont_memue</locator>
-		<locator type="linkText" timeout="2" value="账号信息管理"  desc="账号信息管理">account_management</locator>
-		<locator type="linkText" timeout="2" value="预约明细"  desc="预约明细">AppointmentDetail</locator>
-		<locator type="linkText" timeout="2" value="咨询统计"  desc="咨询统计">queryConsultation</locator>
-		<locator type="linkText" timeout="2" value="客服工作统计"  desc="客服工作统计">queryCustomerWork</locator>	
-		<locator type="linkText" timeout="2" value="短信查询"  desc="短信查询">queryMessagePage</locator>
-		<locator type="xpath" timeout="2" value="//a[@href='/password/logout']"  desc="退出登录">layout</locator>
-				
-	</page>
-	<page pagename="org.webdriver.patatiumwebui.pageObject.AccountMangerPage" value="" desc="账号注册页面">
-		<locator type="xpath" timeout="3" value="//input[@name='realName']" desc="按主账号姓名查询">queryForName</locator>
-		<locator type="xpath" timeout="2" value="//input[@name='mobilePhone']"  desc="按主账号手机查询">queryForMobilePhone</locator>
-		<locator type="xpath" timeout="2" value="//input[@name='identityCardNumber']"  desc="按身份证号查询">queryForIdentityCard</locator>
-		<locator type="xpath" timeout="2" value=".//*[@id='searchForm']//a[@onclick='searchsubmit()']"  desc="查询按钮">queryButton</locator>
-		<locator type="xpath" timeout="2" value="//table"  desc="查询结果表格">queryResultTable</locator>
-		<locator type="linkText" timeout="2" value="账号注册"  desc="账号注册按钮">registerButton</locator>
-		<locator type="xpath" timeout="2" value="//input[@name='telephone']"  desc="注册内容——电话号码输入">register_tel</locator>
-		<locator type="xpath" timeout="2" value="//input[@name='patientName']"  desc="账号注册--姓名">register_patientName</locator>
-		<locator type="xpath" timeout="2" value="//select[@name='identityCardType']"  desc="账号注册-证件类型选">register_identityCardType</locator>
-		<locator type="xpath" timeout="2" value="//input[@name='identityCardNumber']"  desc="账号注册-身份证号吗">register_identityCardNumber</locator>
-		<locator type="xpath" timeout="2" value=".//*[@onclick='registerPatient()']"  desc="账号注册-保存">register_save</locator>
-		<locator type="xpath" timeout="2" value=".//*[@id='btnsubmit']"  desc="账号注册-保存成功确定按钮">register_confirm</locator>
-		<locator type="xpath" timeout="2" value="//a[@class='btn btn-primary']"  desc="新增就诊人">add_paitent</locator>
-		<locator type="xpath" timeout="2" value="//input[@name='realName']"  desc="新增就诊人-姓名">add_paitent_name</locator>
-		<locator type="xpath" timeout="2" value="//button[@onclick='addOfPatient()']"  desc="新增就诊人-保存">add_paitent_save</locator>		
-	</page>
-	<page pagename="org.webdriver.patatiumwebui.pageObject.AppointmentPage" value="" desc="预约挂号">
-		<locator type="xpath" timeout="2" value=".//*[@id='query-districtId-select']" desc="地区选择">districtId_select</locator>
-		<locator type="xpath" timeout="2" value=".//*[@id='hospitalPinyinOrName']"  desc="医院名称输入">hospitalPinyinOrName</locator>
-		<locator type="xpath" timeout="2" value=".//*[@id='departmentId-select']"  desc="科室选择">departmentId_select</locator>
-		<locator type="xpath" timeout="2" value=".//*[@id='hospital_list']/li"  desc="查询">hospital_list</locator>
-		<locator type="xpath" timeout="2" value=".//*[@id='searchSubmit']"  desc="查询">appointment_query</locator>
-		<locator type="xpath" timeout="2" value="//table[@class='table table-bordered']/tbody/tr/td/a"  desc="可预约号">SignalSources</locator>
-		<locator type="xpath" timeout="2" value="//input[ @name='schedulingInfoDetail' and not(@disabled)]"  desc="具体时间段号源">timeSignalSources</locator>
-		<locator type="xpath" timeout="2" value="//button[@onclick='toCheckPatient()']"  desc="选择号源下一步">nextsetepforfirst</locator>
-		<locator type="xpath" timeout="2" value="//input[@name='telephone']"  desc="预约挂号电话号码">telephone</locator>
-		<locator type="xpath" timeout="2" value=".//*[@name='patientName']"  desc="患者姓名">patientName</locator>
-		<locator type="xpath" timeout="2" value=".//*[@name='identityCardNumber']"  desc="证件号码">identityCardNumber</locator>
-		<locator type="xpath" timeout="2" value=".//*[@id='myModal3']"  desc="返回成功信息对话框">appintment_successs</locator>
-		<locator type="xpath" timeout="2" value=".//*[@id='myModal3']//button[text()='关闭']"  desc="成功页面关闭按钮">closebutton</locator>
-		<locator type="xpath" timeout="2" value=".//*[@id='dialog']/div/div[1]/button"  desc="信息输入框关闭按钮">patientInfo_closebutton</locator>
-		<locator type="xpath" timeout="2" value=".//*[@id='noticeSpan']"  desc="预约失败的返回信息">failed_message</locator>
-		<locator type="xpath" timeout="2" value=".//*[@id='submitPatient']"  desc="输入完账号信息后的下一步">netstepforlast</locator> 
-		<locator type="xpath" timeout="2" value="//a[contains(text(),'取消订单')]"  desc="取消订单按钮">dismissAppiont</locator>
-		<locator type="xpath" timeout="2" value=".//*[@id='myModal3']"  desc="预约挂号成功返回信息">appoint_succes_info</locator>
-		<locator type="xpath" timeout="2" value=".//*[@id='myModal3']//p[@name='appointmentCodeInfo']/strong"  desc="预约号码">appoint_number</locator>
-		<locator type="xpath" timeout="2" value="//p[@name='appointmentInfoTitle']/strong"  desc="具体号源预约标题">appointmentInfoTitle</locator>
-		<locator type="xpath" timeout="2" value="//div[@id='myModal']//button[@class='close']"  desc="预约挂号选择号源关闭按钮">appointmentInfo_close_button</locator>
-	</page>
-	<page pagename="org.webdriver.patatiumwebui.pageObject.AppointmentDetailPage" value="" desc="预约明细页面">
-		<locator type="xpath" timeout="2" value="//input[@name='familyMemberName']"  desc="患者姓名">familyMemberName</locator>
-		<locator type="xpath" timeout="2" value="//input[@name='telephone']"  desc="电话号码">telephone</locator>
-		<locator type="xpath" timeout="2" value="//input[@name='identityCardNumber']"  desc="身份证号码">identityCardNumber</locator>
-		<locator type="xpath" timeout="2" value=".//*[@id='customerWorkForm']/input[@name='orderNumOrAppointmentCode']"  desc="预约号码">appiont_num</locator>
-		<locator type="xpath" timeout="2" value=".//*[@id='customerWorkForm']/a"  desc="查询按钮">query_button</locator>
-		<locator type="xpath" timeout="2" value="//table"  desc="查询结果表格">query_table</locator>
-		<locator type="xpath" timeout="2" value="//form[@id='cancelForm']//input[@value='确定']"  desc="取消订单确认按钮">dismissAppiontconfirm</locator>
-		<locator type="xpath" timeout="2" value="//td[@class='main_blue' and contains(text(),'待就诊')]"  desc="待就诊状态值">order_state_treatment</locator>
-		<locator type="xpath" timeout="2" value="//a[contains(text(),'取消订单')]"  desc="取消订单按钮">dismissAppiont</locator>
-	</page>
-	<page pagename="org.webdriver.patatiumwebui.pageObject.OmsHomePage" value="" desc="运营后台账户管理">
-		<locator type="xpath" timeout="2" value=".//*[@id='LoginName']" desc="用户名">username</locator>
-		<locator type="xpath" timeout="2" value=".//*[@id='PassWord']" desc="密码">password</locator>
-		<locator type="xpath" timeout="2" value="//input[@value='登录']" desc="登录">loginbutton</locator>
-		<locator type="linktext" timeout="2" value="会员管理" desc="会员管理">vip_management</locator>
-		<locator type="linktext" timeout="2" value="账户管理"  desc="账户管理">account_management</locator>
-		<locator type="xpath" timeout="2" value=".//*[@id='MobilePhone']"  desc="账户手机">account_MobilePhone</locator>
-		<locator type="xpath" timeout="2" value="//button[@class='btn btn-purple btn-sm']"  desc="查询">account_query</locator>
-		<locator type="xpath" timeout="2" value=".//*[@id='simple-table-2']"  desc="查询结果表格">account_query_table</locator>
-		<locator type="xpath" timeout="2" value=".//*[@id='simple-table-2']/tbody/tr/td[7]/div/a[5]"  desc="账号注销按钮">delete_account_button</locator>
-		<locator type="xpath" timeout="2" value="(//button[@class='btn btn-primary btn-xs'])[1]"  desc="账号注销确认按钮">delete_account_confirm_button</locator>
-		<locator type="xpath" timeout="2" value="(//button[@class='btn btn-primary btn-xs'])[2]"  desc="删除成功确定按钮">delete_account_success_button</locator>
-	</page>
-	
 </map>
