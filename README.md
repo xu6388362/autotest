@@ -163,7 +163,7 @@ Jenkins：1、checkout 项目代码 2、指定pom.xml文件  3、执行mvn clean
 邮件展示如下：
 ![输入图片说明](http://git.oschina.net/uploads/images/2016/0829/135522_d205f0dd_482055.png "在这里输入图片标题")
 日志文件展示如下：
-![输入图片说明](http://git.oschina.net/uploads/images/2016/0829/135713_8d369238_482055.jpeg "在这里输入图片标题")
+![输入图片说明](http://git.oschina.net/uploads/images/2016/0829/140857_d1524893_482055.png "在这里输入图片标题")
 
 <h1>Xpath 详解：</h1>
 注：可通过火狐浏览器安装,firebug,firepath插件校验xpath的正确性
