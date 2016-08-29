@@ -162,6 +162,8 @@ Jenkins：1、checkout 项目代码 2、指定pom.xml文件  3、执行mvn clean
 ![输入图片说明](http://git.oschina.net/uploads/images/2016/0829/135306_b9ddfe80_482055.jpeg "在这里输入图片标题")
 邮件展示如下：
 ![输入图片说明](http://git.oschina.net/uploads/images/2016/0829/135522_d205f0dd_482055.png "在这里输入图片标题")
+日志文件展示如下：
+![输入图片说明](http://git.oschina.net/uploads/images/2016/0829/135713_8d369238_482055.jpeg "在这里输入图片标题")
 
 下面给大家简单讲解下，该框架的使用。（使用该框架之前首先要做的是环境搭建，环境搭建比较简单，在此就不介绍了）
 
