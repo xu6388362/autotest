@@ -179,7 +179,9 @@ Text（）：通过元素的文本值查找元素，例：//h2[text()='华康移
 Contains();//input[contains(@id,'nt')] 模糊匹配，查找id包含nt的input标签
 //h2[contains(text(),'华康移动医疗客服后台')] 查找文本值包含华康移动医疗客服后台的元素
 //灵活使用案例：
-查找元素<span class=”cde”>八佰伴</span>
+查找元素```
+<span class=”cde”>八佰伴</span>
+```
 ```
 <span class=”cde”>嘎嘎嘎</span>
 <div id=”abc”>
