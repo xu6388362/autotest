@@ -5,7 +5,18 @@
 
 <h1>Demo演示</h1>
 <p>具体在代码在src/test/java目录下</p>
-<h2>1、公共action封装实例（业务操作）</h2>
+<h2>1、对象库文件编写</h2>
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<map>	
+	<page pagename="org.webdriver.patatiumwebui.pageObject.LoginPage" value="http://192.168.0.21:8086/User/Login" desc="华康运营后台登录页面">
+		<locator type="xpath" timeout="3" value="//input[@id='loginname']"  desc="用户名">用户名输入框</locator>
+		<locator type="id" timeout="3" value="nloginpwd"  desc="密码">密码输入框</locator>
+		<locator type="id" timeout="3" value="loginsubmit"  desc="登录">登录按钮</locator>//a[@href='/password/logout']
+	</page>
+</map>
+```
+<h2>2、公共action封装实例（业务操作）</h2>
 ```
 package org.webdriver.patatiumwebui.action;
 
@@ -35,11 +46,11 @@ public class LoginAction extends TestBaseCase{
 }
 
 ```
-<h2>2、驱动数据来源实例</h2>
+<h2>3、驱动数据来源实例</h2>
 1、在src/main/resources/data下创建loginData.xml文件
 编写如下内容
 ![输入图片说明](http://git.oschina.net/uploads/images/2016/0829/123627_cb6607c8_482055.png "在这里输入图片标题")
-<h2>3、测试用例编写</h2>
+<h2>4、测试用例编写</h2>
 普通测试用例：
 ```
 @Test(description="登录成功测试")
@@ -80,7 +91,7 @@ public class LoginAction extends TestBaseCase{
 	}
 	//数据驱动案例--end
 ```
-<h2>4、testng.xml配置</h2>
+<h2>5、testng.xml配置</h2>
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
