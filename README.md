@@ -4,16 +4,33 @@
 目前框架还不是特别完善，还需要写一些脚本实现自动化；学习该框架需要熟悉一定的HTML 和java基础，后续可以考虑自动编码的实现。**
 
 <h1>Demo演示</h1>
-具体在代码在src/test目录下
-@Test(description=’主页--检查医院管理菜单’)
-Public void checkHospiatalMenue()
-{  
-    ElementAction action=new ElementAction();  ---创建元素操作对象
-    HomePage homePage=new HomePage();---创建主页对象
-    action.click(homePage.HospitalMenue());---单击主页下的医院管理菜单
-    action.sleep(2);---暂停2秒
-    Assertion.verityTextPresent(“医院基本信息”，“点击医院信息管理菜单，检查是否进入医院管理页面”)；--设置检查点
-    Assertion.verityError();
+<p>具体在代码在src/test/java目录下</p>
+<h2>公共action封装实例（业务操作）</h2>
+package org.webdriver.patatiumwebui.action;
+
+import org.webdriver.patatiumwebui.pageObject.LoginPage;
+import org.webdriver.patatiumwebui.utils.ElementAction;
+import org.webdriver.patatiumwebui.utils.TestBaseCase;
+
+import java.io.IOException;
+
+/**
+ * Created by zhengshuheng on 2016/8/29 0029.
+ */
+public class LoginAction extends TestBaseCase{
+    public LoginAction(String Url,String UserName,String PassWord) throws IOException
+    {
+        //此driver变量继承自TestBase变量
+        LoginPage loginPage=new LoginPage();
+        loginPage.open(Url);
+        System.out.println(driver.getCurrentUrl());
+        ElementAction action=new ElementAction();
+        action.clear(loginPage.密码输入框());
+        action.type(loginPage.用户名输入框(),UserName);
+        action.clear(loginPage.密码输入框());
+        action.type(loginPage.密码输入框(),PassWord);
+        action.click(loginPage.登录按钮());
+    }
 }
 
 下面给大家简单讲解下，该框架的使用。（使用该框架之前首先要做的是环境搭建，环境搭建比较简单，在此就不介绍了）
