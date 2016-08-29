@@ -36,6 +36,9 @@ public class LoginAction extends TestBaseCase{
 
 ```
 <h2>2、驱动数据来源实例</h2>
+1、在src/main/resources/data下创建loginData.xml文件
+编写如下内容
+![输入图片说明](http://git.oschina.net/uploads/images/2016/0829/123627_cb6607c8_482055.png "在这里输入图片标题")
 
 下面给大家简单讲解下，该框架的使用。（使用该框架之前首先要做的是环境搭建，环境搭建比较简单，在此就不介绍了）
 
