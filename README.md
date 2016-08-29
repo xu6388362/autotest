@@ -64,7 +64,7 @@ public class LoginAction extends TestBaseCase{
 ```
 公共Action代码放在src/main/java/org/webdriver/patatiumwebui/Action 包下
 <h2>3、驱动数据来源实例</h2>
-1、在src/main/resources/data下创建loginData.xml文件
+1、在src/main/resources/data下创建loginData.xls文件
 编写如下内容
 ![输入图片说明](http://git.oschina.net/uploads/images/2016/0829/123627_cb6607c8_482055.png "在这里输入图片标题")
 <h2>4、测试用例编写</h2>
