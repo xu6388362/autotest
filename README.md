@@ -6,6 +6,7 @@
 <h1>Demo演示</h1>
 <p>具体在代码在src/test/java目录下</p>
 <h2>公共action封装实例（业务操作）</h2>
+```
 package org.webdriver.patatiumwebui.action;
 
 import org.webdriver.patatiumwebui.pageObject.LoginPage;
@@ -33,6 +34,7 @@ public class LoginAction extends TestBaseCase{
     }
 }
 
+```
 下面给大家简单讲解下，该框架的使用。（使用该框架之前首先要做的是环境搭建，环境搭建比较简单，在此就不介绍了）
 
 第一步：创建XML对象库（编写xml对象库文件）
