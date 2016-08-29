@@ -9,11 +9,11 @@
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <map>	
-	<page pagename="org.webdriver.patatiumwebui.pageObject.LoginPage" value="http://192.168.0.21:8086/User/Login" desc="华康运营后台登录页面">
-		<locator type="xpath" timeout="3" value="//input[@id='loginname']"  desc="用户名">用户名输入框</locator>
-		<locator type="id" timeout="3" value="nloginpwd"  desc="密码">密码输入框</locator>
-		<locator type="id" timeout="3" value="loginsubmit"  desc="登录">登录按钮</locator>//a[@href='/password/logout']
-	</page>
+  <page pagename="org.webdriver.patatiumwebui.pageObject.LoginPage" value="" desc="京东登录页面">
+     <locator type="xpath" timeout="3" value="//input[@id='loginname']"  desc="用户名">用户名输入框</locator>
+     <locator type="id" timeout="3" value="nloginpwd"  desc="密码">密码输入框</locator>
+     <locator type="id" timeout="3" value="loginsubmit"  desc="登录">登录按钮</locator>//a[@href='/password/logout']
+  </page>
 </map>
 ```
 <h2>2、公共action封装实例（业务操作）</h2>
