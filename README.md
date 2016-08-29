@@ -39,7 +39,22 @@ public class LoginAction extends TestBaseCase{
 1、在src/main/resources/data下创建loginData.xml文件
 编写如下内容
 ![输入图片说明](http://git.oschina.net/uploads/images/2016/0829/123627_cb6607c8_482055.png "在这里输入图片标题")
-
+<h2>3、测试用例编写</h2>
+普通测试用例：
+```
+@Test(description="登录成功测试")
+	@Parameters({"BaseUrl"})//读取testng.xml参数
+	public void login(String BaseUrl) throws IOException
+	{
+		//调用登录方法，输入正确的用户名和密码
+		LoginAction loginAction=new LoginAction(BaseUrl+"/new/login.aspx","13026696420","zheng15970066750");
+		action.sleep(2);
+		//设置检查点
+		Assertion.VerityTextPresentPrecision("jd_8456195","输入正确的用户名和密码，验证是否成功进入主页");
+		//设置用例断言，判断用例是否失败
+		Assertion.VerityError();
+	}
+```
 下面给大家简单讲解下，该框架的使用。（使用该框架之前首先要做的是环境搭建，环境搭建比较简单，在此就不介绍了）
 
 第一步：创建XML对象库（编写xml对象库文件）
