@@ -180,6 +180,7 @@ Contains();//input[contains(@id,'nt')] 模糊匹配，查找id包含nt的input�
 //h2[contains(text(),'华康移动医疗客服后台')] 查找文本值包含华康移动医疗客服后台的元素
 //灵活使用案例：
 查找元素<span class=”cde”>八佰伴</span>
+```
 <span class=”cde”>嘎嘎嘎</span>
 <div id=”abc”>
    <form>
@@ -190,6 +191,7 @@ Contains();//input[contains(@id,'nt')] 模糊匹配，查找id包含nt的input�
             </div>
    </form>
 <div>
+```
 分析：该元素，没有唯一性的id，name等标签，并且层级多，上一级也没有唯一性的东西，只能从上上上级开始查找元素。但是从上上级查找元素，xpath的层级多，定位信息复杂，那么有没有办法优化精简呢？答案是肯定的，利用//可以大幅优化精简xpath表达式
 方案一：//div[@id=’abc’]/form/div/input/span
 方案二：//*[@id=’abc’]/form/div/input/span[@class=’cde’]
