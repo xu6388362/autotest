@@ -5,7 +5,7 @@
 
 <h1>Demo演示</h1>
 <p>具体在代码在src/test/java目录下</p>
-<h2>1、对象库文件编写</h2>
+<h2>1、对象库文件编写(文件名定义为UILibrary.xml)</h2>
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <!--整个对象库文件的根目录，管理整个项目的对象-->
