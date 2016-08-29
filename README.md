@@ -60,6 +60,7 @@ public class LoginAction extends TestBaseCase{
 }
 
 ```
+公共Action代码放在src/main/java/org/webdriver/patatiumwebui/Action 包下
 <h2>3、驱动数据来源实例</h2>
 1、在src/main/resources/data下创建loginData.xml文件
 编写如下内容
@@ -105,6 +106,7 @@ public class LoginAction extends TestBaseCase{
 	}
 	//数据驱动案例--end
 ```
+测试用例代码放在src/test/java 包下
 <h2>5、testng.xml配置</h2>
 ```
 <?xml version="1.0" encoding="utf-8"?>
