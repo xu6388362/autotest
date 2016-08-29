@@ -4,6 +4,7 @@
 目前框架还不是特别完善，还需要写一些脚本实现自动化；学习该框架需要熟悉一定的HTML 和java基础，后续可以考虑自动编码的实现。**
 
 <h1>Demo演示</h1>
+具体在代码在src/test目录下
 @Test(description=’主页--检查医院管理菜单’)
 Public void checkHospiatalMenue()
 {  
