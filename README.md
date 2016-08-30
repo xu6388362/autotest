@@ -13,8 +13,7 @@
 <!--整个对象库文件的根目录，管理整个项目的对象-->
 <map>
     <!--管理一个页面的元素（webelement：input,select,textare,a,li等标签），一个page包含多个locator对象
-    Pagename:page对象名字，格式：net.hk515.PageObject.xxxPage;最后面那位才是真正的页面名字，前面的是java对象库路径；
-    另外注意，页面名字是头个单词大写；例如主页：名字定义为 net.hk515.PageObject.HomePage
+    Pagename:page对象名字，格式：org.webdriver.patatiumwebui.PageObject.xxxPage;最后面那位才是真正的页面名字，前面的是java对象库路径；另外注意，页面名字是头个单词大写；例如主页：名字定义为 org.webdriver.patatiumwebui.HomePage
     Value：页面对象的URL，可不填。
     Desc:页面对象中文描述-->
     <page pagename="org.webdriver.patatiumwebui.pageObject.LoginPage" value="" desc="京东登录页面">
