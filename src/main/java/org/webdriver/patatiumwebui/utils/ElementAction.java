@@ -839,7 +839,6 @@ public class ElementAction extends TestBaseCase{
 		wait.until(pageLoad);
 	}
 	public void executeJS(String js) {
-		// TODO 自动生成的方法存根
 		((JavascriptExecutor) driver).executeScript(js);
 		System.out.println("执行JS脚本："+js);
 
