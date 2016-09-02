@@ -212,7 +212,7 @@ Contains();//input[contains(@id,'nt')] 模糊匹配，查找id包含nt的input�
 ![输入图片说明](http://git.oschina.net/uploads/images/2016/0829/141110_462d5c6d_482055.png "在这里输入图片标题")
 #License
 ```
-Apache License Version 2.0 see http://www.apache.org/licenses/LICENSE-2.0.html
+GPL V2.0
 ```
 <h2>如果您觉得这个产品对您有用，您可以捐助下我，让我有理由继续下去，非常感谢。</h2>
 ![输入图片说明](http://git.oschina.net/uploads/images/2016/0829/144253_111773ec_482055.jpeg "在这里输入图片标题")
