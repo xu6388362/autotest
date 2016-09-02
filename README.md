@@ -1,6 +1,7 @@
 #PatatiumWebUi
 <h1>简介</h1>
- **这是一个webui自动化测试框架，由<a href="http://www.webdriver.org">webdriver中文社区</a>创办人土豆(本人技术笔名)所创建,该web自动化测试框架是用java语言编写的，基于selenium webdriver 的开源自动化测试框架，该框架结合了testng,selenium,webdriver，jxl，jodd-http 等工具。该框架基于页面对象模型（POM）模型架构，实现了关键字驱动技术，数据驱动,无需掌握多少编程知识即可编写脚本，同时实现了数据与代码分离的功能：1、元素定位信息保存在对象库文件中 2、测试用例数据可以存储在excel中。从而实现，页面元素位置变化，无需改动脚本，只需修改对应的元素定位信息即可。
+ **这是一个webui自动化测试框架，由<a href="http://www.webdriver.org">webdriver中文社区</a>创办人土豆(本人技术笔名)所创建,该web自动化测试框架是用java语言编写的，基于selenium webdriver 的开源自动化测试框架，该框架结合了testng,selenium,webdriver，jxl，jodd-http 等工具。该框架基于页面对象模型（POM）架构，实现了关键字驱动技术，数据驱动,无需掌握多少编程知识即可编写脚本，同时实现了数据与代码分离的功能：1、元素定位信息保存在对象库文件中 2、测试用例数据可以存储在excel中。从而实现，页面元素位置变化，无需改动脚本，只需修改对应的元素定位信息即可。
+实现了检查点及用例失败自动截图功能，自动生成html测试报告及自动发送html邮件测试报告功能。
 目前框架还不是特别完善，还需要写一些脚本实现自动化；学习该框架需要熟悉一定的HTML 和java基础，后续可以考虑自动编码的实现。**
 <h1>环境配置</h1>
 1、jdk 1.8
@@ -69,7 +70,7 @@ public class LoginAction extends TestBaseCase{
 <h2>4、测试用例编写</h2>
 普通测试用例：
 ```
-@Test(description="登录成功测试")
+        @Test(description="登录成功测试")
 	@Parameters({"BaseUrl"})//读取testng.xml参数
 	public void login(String BaseUrl) throws IOException
 	{
@@ -84,7 +85,7 @@ public class LoginAction extends TestBaseCase{
 ```
 数据驱动测试用例：
 ```
-//数据驱动案例--start
+       //数据驱动案例--start
 	@DataProvider(name="longinData")
 	public Object[][] loginData()
 	{
@@ -158,7 +159,7 @@ IDE：在IDE集成开发环境下右键testng.xml使用testng运行
 Maven:执行mvn clean ;mvn test 命令
 Jenkins：1、checkout 项目代码 2、指定pom.xml文件  3、执行mvn clean ;mvn test 命令
 <h2>7、查看测试报告及日志文件</h2>
-用例执行完毕，会自动发送邮件报告及生成测试报告文件
+用例执行完毕，会自动发送邮件报告及生成测试报告文件；用例失败会自动截图并将其展示在报告中，也可以将用例失败堆栈信息显示到报表中
 测试报告文件生成在项目根目录下test-out目录下report.html文件
 报告展示如下：
 ![输入图片说明](http://git.oschina.net/uploads/images/2016/0829/135306_b9ddfe80_482055.jpeg "在这里输入图片标题")
