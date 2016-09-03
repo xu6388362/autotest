@@ -613,7 +613,7 @@ public class TestReport implements IReporter{
 			sb2.append("<body>\n");
 			sb2.append("<div id=\"content\">\n");
 			sb2.append("<div id=\"report_title\">\n");
-			sb2.append("<div id=\"logo\"><img src=\"http://218.17.157.250:8848/logo1.png\"></img></div>\n");
+			sb2.append("<div id=\"logo\"><img src=\"http://www.webdriver.org/template/time_6th_travel/src/logo.png\"></img></div>\n");
 			sb2.append("<div style=\"clear:both\"><div id=\"time\">\n");
 			sb2.append("<div style=\"pading-top:20px\">开始时间："
 					+ this.formatDate(fullResults.get(0).getStartMillis())
