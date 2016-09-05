@@ -7,6 +7,8 @@
 1、jdk 1.8
 2、idea/eclipse
 3、maven
+<h1>API文档</h1>
+<a href="http://www.webdriver.org/doc/patatiumwebui/api/">点击查看API文档</a>
 <h1>Demo演示</h1>
 <h2>1、对象库文件编写(文件名定义为UILibrary.xml)</h2>
 ```
