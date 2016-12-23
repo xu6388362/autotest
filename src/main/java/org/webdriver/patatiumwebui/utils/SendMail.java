@@ -18,6 +18,7 @@ public class SendMail {
 	private Log log=new Log(SendMail.class);
 	public static void main(String[] args) {
 		SendMail sendMail=new SendMail();
+		sendMail.sendmessage("test@163.com", "test123456", "smtp.163.com", "25", "test@163.com","test@qq.com", "你好", "你在家吗？");
 
 	}
 	/**
