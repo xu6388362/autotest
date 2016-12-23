@@ -159,6 +159,7 @@ public class LoginAction extends TestBaseCase{
 
 ```
 串行执行多个浏览器配置
+
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
