@@ -114,6 +114,7 @@ public class LoginAction extends TestBaseCase{
 ```
 测试用例代码放在src/test/java 包下
 <h2>5、testng.xml配置</h2>
+普通串行执行配置（只用一个浏览器跑用例）
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
@@ -156,6 +157,53 @@ public class LoginAction extends TestBaseCase{
     </test> <!-- Test -->
 </suite> <!-- Suite -->
 
+```
+串行执行多个浏览器配置
+```
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<parameter name="driver" value="FirefoxDriver" /> <!--测试浏览器：支持火狐，谷歌，IE-->
+	<parameter name="nodeURL" value="" /> <!--selenium grid分布式运行node节点url，如不用分布式运行，则留空-->
+	<parameter name="BaseUrl" value="https://passport.jd.com" />  <!-- 测试系统基础Url-->
+	<parameter name="UserName" value="" /> <!-- 系统登录用户名-->
+	<parameter name="PassWord" value="" />  <!-- 系统登录密码-->
+    <parameter name="smtpUserName" value="trexliushao@163.com" />  <!-- 测试报告邮件发送：smtp身份证验证-->
+    <parameter name="smtpPassWord" value="test123456" />  <!-- 测试报告邮件发送：smtp身份证验证-->
+    <parameter name="smtpHost" value="" />  <!-- 测试报告邮件发送：smtp主机地址-->
+    <parameter name="smtpPort" value="" />  <!-- 测试报告邮件发送：smtp主机端口-->
+    <parameter name="mailTitle" value="Webdriver中文社区-自动化测试报告" />  <!-- 测试报告邮件发送：邮件标题-->
+    <parameter name="logUrl" value="" />  <!-- 测试报告邮件发送：用例运行日志url-->
+    <parameter name="reportUrl" value="" />  <!-- 测试报告邮件发送：完整测试报告url-->
+	<parameter name="recipients" value="" /> <!-- 测试报告邮件发送：收件人，多个用,号隔开-->
+    <parameter name="reportTitle" value="Webdriver中文社区-自动化测试报告" />  <!--测试报告标题-->
+	<listeners><!-- 监听器设置-->
+        <listener class-name="org.webdriver.patatiumwebui.utils.TestListener"></listener>
+        <listener class-name="org.webdriver.patatiumwebui.utils.TestReport"></listener>
+    </listeners>
+     <test name="登录失败测试用例：数据驱动"> <!-- 测试用例描述-->
+         <parameter name="driver" value="FirefoxDriver" /> <!--测试浏览器：支持火狐，谷歌，IE--><!--在test下配置浏览器信息，可以实现每个test执行不同的浏览器，从而实现一次性串行执行多个浏览器的效果，用于兼容性测试-->
+         <parameter name="nodeURL" value="http://192.168.0.178:3155/wd/hub" /> <!--selenium grid分布式运行node节点url，如不用分布式运行，则留空-->
+       <classes>
+      <class name="LoginTest">
+      	     <methods >
+                   <include name="loginFail" />
+             </methods>
+       </class>
+    </classes>
+  </test> <!-- Test -->
+    <test name="登录成功测试用例">
+        <parameter name="driver" value="ChormeDriver" /> <!--测试浏览器：支持火狐，谷歌，IE-->
+        <parameter name="nodeURL" value="http://192.168.0.178:3166/wd/hub" /> <!--selenium grid分布式运行node节点url，如不用分布式运行，则留空-->
+        <classes>
+            <class name="LoginTest">
+                <methods >
+                    <include name="login" />
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->
 ```
 testng.xml放在项目根目录下面。
 <h2>6、执行用例</h2>
