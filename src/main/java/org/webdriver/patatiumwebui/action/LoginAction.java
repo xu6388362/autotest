@@ -17,6 +17,8 @@ public class LoginAction extends TestBaseCase{
         loginPage.open(Url);
         System.out.println(driver.getCurrentUrl());
         ElementAction action=new ElementAction();
+        action.click(loginPage.账户登录());
+        action.sleep(1);
         action.clear(loginPage.密码输入框());
         action.type(loginPage.用户名输入框(),UserName);
         action.clear(loginPage.密码输入框());
