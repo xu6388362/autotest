@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import org.webdriver.patatiumwebui.utils.BaseAction;
 import org.webdriver.patatiumwebui.utils.Locator;
-import org.webdriver.patatiumwebui.pageObjectConfig.PageObjectAutoCode;//华康运营后台登录页面_对象库类
+import org.webdriver.patatiumwebui.pageObjectConfig.PageObjectAutoCode;//京东登录页面_对象库类
 public class LoginPage extends BaseAction {
 //用于eclipse工程内运行查找对象库文件路径
 private String path="src/main/java/org/webdriver/patatiumwebui/pageObjectConfig/UILibrary.xml";
@@ -12,6 +12,17 @@ private String path="src/main/java/org/webdriver/patatiumwebui/pageObjectConfig/
 	setXmlObjectPath(path);
 getLocatorMap();
 }
+/***
+* 账户登录
+* @return
+* @throws IOException
+*/
+public Locator 账户登录() throws IOException
+ {
+   Locator locator=getLocator("账户登录");
+   return locator;
+ }
+
 /***
 * 用户名
 * @return
