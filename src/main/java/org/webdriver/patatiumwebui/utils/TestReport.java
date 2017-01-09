@@ -1,7 +1,5 @@
 package org.webdriver.patatiumwebui.utils;
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
@@ -613,7 +611,7 @@ public class TestReport implements IReporter{
 			sb2.append("<body>\n");
 			sb2.append("<div id=\"content\">\n");
 			sb2.append("<div id=\"report_title\">\n");
-			sb2.append("<div id=\"logo\"><img src=\"http://www.webdriver.org/template/time_6th_travel/src/logo.png\"></img></div>\n");
+			sb2.append("<div id=\"logo\"><img src=\"https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=4224506436,2681268405&fm=58&s=D2B40762B0B0D98286E240520200D0FA\"></img></div>\n");
 			sb2.append("<div style=\"clear:both\"><div id=\"time\">\n");
 			sb2.append("<div style=\"pading-top:20px\">开始时间："
 					+ this.formatDate(fullResults.get(0).getStartMillis())
@@ -638,7 +636,7 @@ public class TestReport implements IReporter{
 			sb2.append("<div id=\"report_total\">\n");
 			sb2.append("<div>(<span style=\"color:green\">绿色字体pass用例</span><span style=\"color:red\">红色字体failed用例</span><span style=\"color:gray\">灰色字体skip用例</span>)<span style=\" margin-left:20px\"><a href=\" "
 					+reportUrl
-					+ "\">点击查看完整报表</a></span><span style=\"margin-left:14px\"><a href=\""
+					+ "\">点击查看完整报表</a></span><span style=\"margin-left:14px\">点击查看日志<a href=\""
 					+logUrl
 					+ "\"></a></span></div>\n");
 			sb2.append("<table width=\"100%\" style=\"width:100%;text-align:left;border-collapse:collapse;border-spacing:0;font-size:12px;\" >\n");

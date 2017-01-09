@@ -9,19 +9,13 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.testng.annotations.Parameters;
 
 import org.webdriver.patatiumwebui.config.Config;
 import org.webdriver.patatiumwebui.pageObject.LoginPage;
 import org.webdriver.patatiumwebui.db.ConnDb;
 import org.webdriver.patatiumwebui.utils.Assertion;
 import org.webdriver.patatiumwebui.utils.Locator;
-import org.webdriver.patatiumwebui.utils.ScreenShot;
 import org.webdriver.patatiumwebui.utils.TableElement;
 import org.webdriver.patatiumwebui.utils.TestBaseCase;
 import org.webdriver.patatiumwebui.utils.ElementAction;

@@ -1,4 +1,5 @@
 package org.webdriver.patatiumwebui.utils;
+import org.eclipse.jetty.util.preventers.DriverManagerLeakPreventer;
 import org.webdriver.patatiumwebui.utils.Log;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
@@ -32,8 +33,6 @@ public class TestBaseCase {
 			try {
 				this.driver=setDriver(driver);
 			} catch (Exception e) {
-				// TODO: handle exception
-				//System.out.println("环境配置错误");
 				log.error("没有成功浏览器环境配置错误");
 				e.printStackTrace();
 			}
@@ -68,6 +67,7 @@ public class TestBaseCase {
 	 */
 	private WebDriver setDriver(String browsername)
 	{
+
 		switch (browsername)
 		{
 

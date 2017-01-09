@@ -253,24 +253,20 @@ public class Assertion extends TestBaseCase {
 				flag=false;
 			}
 		} catch (NoSuchElementException e) {
-			// TODO: handle exception
 			flag=false;
 			ElementAction.noSuchElementExceptions.add(e);
 			e.printStackTrace();
-			///AssertFailedLog();
 		}
 		try {
 			Assert.assertTrue(flag);
 			AssertPassLog();
 			assertInfolList.add(verityStr+":pass");
 		} catch (Error f) {
-			// TODO: handle exception
 			AssertFailedLog();
 			errors.add(f);
 			errorIndex++;
 			assertInfolList.add(verityStr+":failed");
 			Assertion.snapshotInfo();
-			//throw f;
 		}
 
 
