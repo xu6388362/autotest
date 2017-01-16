@@ -30,10 +30,11 @@ public class LoginTest extends TestBaseCase {
 	public void login(String BaseUrl) throws IOException
 	{
 		//调用登录方法，输入正确的用户名和密码
-		LoginAction loginAction=new LoginAction(BaseUrl+"/new/login.aspx","111111","abc123");
+		LoginAction loginAction=new LoginAction(BaseUrl+"/new/login.aspx","\n" +
+				"jd_8456195","zheng159791");
 		action.sleep(2);
 		//设置检查点
-		Assertion.VerityTextPresentPrecision("jd_845622","输入正确的用户名和密码，验证是否成功进入主页");
+		Assertion.VerityTextPresentPrecision("jd_8456195","输入正确的用户名和密码，验证是否成功进入主页");
 		//设置用例断言，判断用例是否失败
 		Assertion.VerityError();
 	}

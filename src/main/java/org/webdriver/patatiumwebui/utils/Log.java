@@ -3,7 +3,7 @@ import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
-
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 

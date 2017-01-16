@@ -363,7 +363,6 @@ public class AssertionCheckPoint extends TestBaseCase {
 			driver.findElement(By.xpath(exceptStr));
 			flag=true;
 		} catch (NoSuchElementException e) {
-		
 			flag=false;
 			ElementAction.noSuchElementExceptions.add(e);
 			e.printStackTrace();
