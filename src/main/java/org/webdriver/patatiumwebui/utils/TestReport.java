@@ -636,9 +636,9 @@ public class TestReport implements IReporter{
 			sb2.append("<div id=\"report_total\">\n");
 			sb2.append("<div>(<span style=\"color:green\">绿色字体pass用例</span><span style=\"color:red\">红色字体failed用例</span><span style=\"color:gray\">灰色字体skip用例</span>)<span style=\" margin-left:20px\"><a href=\" "
 					+reportUrl
-					+ "\">点击查看完整报表</a></span><span style=\"margin-left:14px\">点击查看日志<a href=\""
+					+ "\">点击查看完整报表</a></span><span style=\"margin-left:14px\"><a href=\""
 					+logUrl
-					+ "\"></a></span></div>\n");
+					+ "\">点击查看日志</a></span></div>\n");
 			sb2.append("<table width=\"100%\" style=\"width:100%;text-align:left;border-collapse:collapse;border-spacing:0;font-size:12px;\" >\n");
 			sb2.append("<tr>\n"
 					+ "<td  style=\"border:1.5px;border-color:gray; word-break:break-all;border-style: solid;height:20px;\" width=\"18%\"><div align=\"center\">用例总数</div></td>\n");
