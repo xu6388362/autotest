@@ -50,8 +50,8 @@ public class Log
         prop.setProperty("log4j.appender.E.file",filepath);
         prop.setProperty("log4j.appender.E.layout","org.apache.log4j.PatternLayout");
         prop.setProperty("log4j.appender.E.layout.ConversionPattern", "[%d{YYYY-MM-dd HH:mm:ss,SSS}] %-5p %c %m%n");
-
         prop.setProperty("log4j.appender.F","org.apache.log4j.FileAppender");
+        prop.setProperty("log4j.appender.file.encoding","UTF-8");
         //String src="test-output/log";
         //设置日期格式
         //SimpleDateFormat dateFormat=new SimpleDateFormat("yyyy-MM-dd");
