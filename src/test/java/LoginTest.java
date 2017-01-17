@@ -31,7 +31,7 @@ public class LoginTest extends TestBaseCase {
 	{
 		//调用登录方法，输入正确的用户名和密码
 		LoginAction loginAction=new LoginAction(BaseUrl+"/new/login.aspx","\n" +
-				"jd_8456195","zheng159791");
+				"","");
 		action.sleep(2);
 		//设置检查点
 		Assertion.VerityTextPresentPrecision("jd_8456195","输入正确的用户名和密码，验证是否成功进入主页");
