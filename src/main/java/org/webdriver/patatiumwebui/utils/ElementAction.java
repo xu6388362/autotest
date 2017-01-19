@@ -38,6 +38,38 @@ public class ElementAction extends TestBaseCase{
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HHmmssSSS");
 		return formatter.format(date).toString();
 	}
+	private String screenshotMessage(String nowDate)
+	{
+	String msg=	"&lt;a class=\"clickbox\" href=\"#url\"&gt;\n"
+				+ "&lt;img src=\"snapshot/"
+				+ nowDate
+				+ ".jpg\" height=\"100\" width=\"100\" alt=\"\" /&gt;\n"
+				+ "&lt;b class=\"lightbox\"&gt;\n"
+				+ "&lt;b class=\"light\"&gt;&lt;/b&gt;\n"
+				+ "&lt;b class=\"box\"&gt;\n"
+				+ "&lt;img src=\"snapshot/"
+				+ nowDate
+				+ ".jpg\" height=\"530\" width=\"1024\" onmousewheel=\"return bigimg(this)\" alt=\"\" /&gt;\n"
+				+ "&lt;span&gt;滚动鼠标缩放大小,点击X关闭当前图片，返回报表界面.&lt;br /&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;\n"
+				+ "&lt;/b&gt;\n"
+				+ "&lt;/b&gt;\n"
+				+ "&lt;/a&gt;\n"
+				+ "&lt;br class=\"clear\" /&gt;\n"
+				+"&lt;a class=\"clickbox\" href=\"#url\"&gt;"
+				+ "点击查看大图"
+				+ "&lt;b class=\"lightbox\"&gt;"
+				+ "&lt;b class=\"light\"&gt;&lt;/b&gt;"
+				+ "&lt;b class=\"box\"&gt;&lt;img src=\"snapshot/"
+				+ nowDate
+				+ ".jpg\" height=\"530\" width=\"1024\" onmousewheel=\"return bigimg(this)\" alt=\"\" /&gt;"
+				+ "&lt;span&gt;滚动鼠标缩放大小,点击X关闭当前图片，返回报表界面."
+				+ "&lt;br /&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;"
+				+ "&lt;/b&gt;"
+				+ "&lt;/b&gt;"
+				+ " &lt;/a&gt;\n&lt;/br&gt;"
+				+ "&lt;div id=\"close\"&gt;&lt;/div&gt;\n";
+		return msg;
+	}
 	/**
 	 * 查找一组元素
 	 * @param locator 元素定位信息
@@ -75,34 +107,35 @@ public class ElementAction extends TestBaseCase{
 			Date nowDate=new Date();
 			screenShot.setscreenName(this.formatDate(nowDate));
 			screenShot.takeScreenshot();
-			Assertion.messageList.add("&lt;a class=\"clickbox\" href=\"#url\"&gt;\n"
-					+ "&lt;img src=\"snapshot/"
-					+ this.formatDate(nowDate)
-					+ ".jpg\" height=\"100\" width=\"100\" alt=\"\" /&gt;\n"
-					+ "&lt;b class=\"lightbox\"&gt;\n"
-					+ "&lt;b class=\"light\"&gt;&lt;/b&gt;\n"
-					+ "&lt;b class=\"box\"&gt;\n"
-					+ "&lt;img src=\"snapshot/"
-					+ this.formatDate(nowDate)
-					+ ".jpg\" height=\"530\" width=\"1024\" onmousewheel=\"return bigimg(this)\" alt=\"\" /&gt;\n"
-					+ "&lt;span&gt;滚动鼠标缩放大小,点击X关闭当前图片，返回报表界面.&lt;br /&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;\n"
-					+ "&lt;/b&gt;\n"
-					+ "&lt;/b&gt;\n"
-					+ "&lt;/a&gt;\n"
-					+ "&lt;br class=\"clear\" /&gt;\n"
-					+"&lt;a class=\"clickbox\" href=\"#url\"&gt;"
-					+ "点击查看大图"
-					+ "&lt;b class=\"lightbox\"&gt;"
-					+ "&lt;b class=\"light\"&gt;&lt;/b&gt;"
-					+ "&lt;b class=\"box\"&gt;&lt;img src=\"snapshot/"
-					+ this.formatDate(nowDate)
-					+ ".jpg\" height=\"530\" width=\"1024\" onmousewheel=\"return bigimg(this)\" alt=\"\" /&gt;"
-					+ "&lt;span&gt;滚动鼠标缩放大小,点击X关闭当前图片，返回报表界面."
-					+ "&lt;br /&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;"
-					+ "&lt;/b&gt;"
-					+ "&lt;/b&gt;"
-					+ " &lt;/a&gt;\n&lt;/br&gt;"
-					+ "&lt;div id=\"close\"&gt;&lt;/div&gt;\n");
+			Assertion.messageList.add(screenshotMessage(this.formatDate(nowDate)));
+//			Assertion.messageList.add("&lt;a class=\"clickbox\" href=\"#url\"&gt;\n"
+//					+ "&lt;img src=\"snapshot/"
+//					+ this.formatDate(nowDate)
+//					+ ".jpg\" height=\"100\" width=\"100\" alt=\"\" /&gt;\n"
+//					+ "&lt;b class=\"lightbox\"&gt;\n"
+//					+ "&lt;b class=\"light\"&gt;&lt;/b&gt;\n"
+//					+ "&lt;b class=\"box\"&gt;\n"
+//					+ "&lt;img src=\"snapshot/"
+//					+ this.formatDate(nowDate)
+//					+ ".jpg\" height=\"530\" width=\"1024\" onmousewheel=\"return bigimg(this)\" alt=\"\" /&gt;\n"
+//					+ "&lt;span&gt;滚动鼠标缩放大小,点击X关闭当前图片，返回报表界面.&lt;br /&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;\n"
+//					+ "&lt;/b&gt;\n"
+//					+ "&lt;/b&gt;\n"
+//					+ "&lt;/a&gt;\n"
+//					+ "&lt;br class=\"clear\" /&gt;\n"
+//					+"&lt;a class=\"clickbox\" href=\"#url\"&gt;"
+//					+ "点击查看大图"
+//					+ "&lt;b class=\"lightbox\"&gt;"
+//					+ "&lt;b class=\"light\"&gt;&lt;/b&gt;"
+//					+ "&lt;b class=\"box\"&gt;&lt;img src=\"snapshot/"
+//					+ this.formatDate(nowDate)
+//					+ ".jpg\" height=\"530\" width=\"1024\" onmousewheel=\"return bigimg(this)\" alt=\"\" /&gt;"
+//					+ "&lt;span&gt;滚动鼠标缩放大小,点击X关闭当前图片，返回报表界面."
+//					+ "&lt;br /&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;"
+//					+ "&lt;/b&gt;"
+//					+ "&lt;/b&gt;"
+//					+ " &lt;/a&gt;\n&lt;/br&gt;"
+//					+ "&lt;div id=\"close\"&gt;&lt;/div&gt;\n");
 			log.info(this.formatDate(nowDate));
 			//Assertion.assertInfolList.add(arg0)
 			return webElements;
@@ -119,35 +152,36 @@ public class ElementAction extends TestBaseCase{
 			Date nowDate=new Date();
 			screenShot.setscreenName(this.formatDate(nowDate));
 			screenShot.takeScreenshot();
+			Assertion.messageList.add(screenshotMessage(this.formatDate(nowDate)));
 			//Assertion.assertInfolList.add("&lt;a href=\"snapshot/"+this.formatDate(nowDate)+".jpg\" &gt;&lt;img height=\"100\" width=\"100\" src=\"snapshot/"+this.formatDate(nowDate)+".jpg\"&gt;&lt;/img&gt;&lt;/a>&lt;br/&gt;"+"&lt;a href=\"snapshot/"+this.formatDate(nowDate)+".jpg\" &gt;点击查看大图&lt;/a&gt;\n");
-			Assertion.messageList.add("&lt;a class=\"clickbox\" href=\"#url\"&gt;\n"
-					+ "&lt;img src=\"snapshot/"
-					+ this.formatDate(nowDate)
-					+ ".jpg\" height=\"100\" width=\"100\" alt=\"\" /&gt;\n"
-					+ "&lt;b class=\"lightbox\"&gt;\n"
-					+ "&lt;b class=\"light\"&gt;&lt;/b&gt;\n"
-					+ "&lt;b class=\"box\"&gt;\n"
-					+ "&lt;img src=\"snapshot/"
-					+ this.formatDate(nowDate)
-					+ ".jpg\" height=\"530\" width=\"1024\" onmousewheel=\"return bigimg(this)\" alt=\"\" /&gt;\n"
-					+ "&lt;span&gt;滚动鼠标缩放大小,点击X关闭当前图片，返回报表界面.&lt;br /&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;\n"
-					+ "&lt;/b&gt;\n"
-					+ "&lt;/b&gt;\n"
-					+ "&lt;/a&gt;\n"
-					+ "&lt;br class=\"clear\" /&gt;\n"
-					+"&lt;a class=\"clickbox\" href=\"#url\"&gt;"
-					+ "点击查看大图"
-					+ "&lt;b class=\"lightbox\"&gt;"
-					+ "&lt;b class=\"light\"&gt;&lt;/b&gt;"
-					+ "&lt;b class=\"box\"&gt;&lt;img src=\"snapshot/"
-					+ this.formatDate(nowDate)
-					+ ".jpg\" height=\"530\" width=\"1024\" onmousewheel=\"return bigimg(this)\" alt=\"\" /&gt;"
-					+ "&lt;span&gt;滚动鼠标缩放大小,点击X关闭当前图片，返回报表界面."
-					+ "&lt;br /&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;"
-					+ "&lt;/b&gt;"
-					+ "&lt;/b&gt;"
-					+ " &lt;/a&gt;\n&lt;/br&gt;"
-					+ "&lt;div id=\"close\"&gt;&lt;/div&gt;\n");
+//			Assertion.messageList.add("&lt;a class=\"clickbox\" href=\"#url\"&gt;\n"
+//					+ "&lt;img src=\"snapshot/"
+//					+ this.formatDate(nowDate)
+//					+ ".jpg\" height=\"100\" width=\"100\" alt=\"\" /&gt;\n"
+//					+ "&lt;b class=\"lightbox\"&gt;\n"
+//					+ "&lt;b class=\"light\"&gt;&lt;/b&gt;\n"
+//					+ "&lt;b class=\"box\"&gt;\n"
+//					+ "&lt;img src=\"snapshot/"
+//					+ this.formatDate(nowDate)
+//					+ ".jpg\" height=\"530\" width=\"1024\" onmousewheel=\"return bigimg(this)\" alt=\"\" /&gt;\n"
+//					+ "&lt;span&gt;滚动鼠标缩放大小,点击X关闭当前图片，返回报表界面.&lt;br /&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;\n"
+//					+ "&lt;/b&gt;\n"
+//					+ "&lt;/b&gt;\n"
+//					+ "&lt;/a&gt;\n"
+//					+ "&lt;br class=\"clear\" /&gt;\n"
+//					+"&lt;a class=\"clickbox\" href=\"#url\"&gt;"
+//					+ "点击查看大图"
+//					+ "&lt;b class=\"lightbox\"&gt;"
+//					+ "&lt;b class=\"light\"&gt;&lt;/b&gt;"
+//					+ "&lt;b class=\"box\"&gt;&lt;img src=\"snapshot/"
+//					+ this.formatDate(nowDate)
+//					+ ".jpg\" height=\"530\" width=\"1024\" onmousewheel=\"return bigimg(this)\" alt=\"\" /&gt;"
+//					+ "&lt;span&gt;滚动鼠标缩放大小,点击X关闭当前图片，返回报表界面."
+//					+ "&lt;br /&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;"
+//					+ "&lt;/b&gt;"
+//					+ "&lt;/b&gt;"
+//					+ " &lt;/a&gt;\n&lt;/br&gt;"
+//					+ "&lt;div id=\"close\"&gt;&lt;/div&gt;\n");
 			log.info(this.formatDate(nowDate));
 			//Assertion.assertInfolList.add(arg0)
 			return webElements;
@@ -164,36 +198,37 @@ public class ElementAction extends TestBaseCase{
 			Date nowDate=new Date();
 			screenShot.setscreenName(this.formatDate(nowDate));
 			screenShot.takeScreenshot();
+			Assertion.messageList.add(screenshotMessage(this.formatDate(nowDate)));
 			//Assertion.assertInfolList.add("&lt;a href=\"snapshot/"+this.formatDate(nowDate)+".jpg\" &gt;&lt;img height=\"100\" width=\"100\" src=\"snapshot/"+this.formatDate(nowDate)+".jpg\"&gt;&lt;/img&gt;&lt;/a>&lt;br/&gt;"+"&lt;a href=\"snapshot/"+this.formatDate(nowDate)+".jpg\" &gt;点击查看大图&lt;/a&gt;\n");
-			Assertion.messageList.add("&lt;a class=\"clickbox\" href=\"#url\"&gt;\n"
-					+ "&lt;img src=\"snapshot/"
-					+ this.formatDate(nowDate)
-					+ ".jpg\" height=\"100\" width=\"100\" alt=\"\" /&gt;\n"
-					+ "&lt;b class=\"lightbox\"&gt;\n"
-					+ "&lt;b class=\"light\"&gt;&lt;/b&gt;\n"
-					+ "&lt;b class=\"box\"&gt;\n"
-					+ "&lt;img src=\"snapshot/"
-					+ this.formatDate(nowDate)
-					+ ".jpg\" height=\"530\" width=\"1024\" onmousewheel=\"return bigimg(this)\" alt=\"\" /&gt;\n"
-					+ "&lt;span&gt;滚动鼠标缩放大小,点击X关闭当前图片，返回报表界面.&lt;br /&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;\n"
-					+ "&lt;/b&gt;\n"
-					+ "&lt;/b&gt;\n"
-					+ "&lt;/a&gt;\n"
-					+ "&lt;br class=\"clear\" /&gt;\n"
-					+"&lt;a class=\"clickbox\" href=\"#url\"&gt;"
-					+ "点击查看大图"
-					+ "&lt;b class=\"lightbox\"&gt;"
-					+ "&lt;b class=\"light\"&gt;&lt;/b&gt;"
-					+ "&lt;b class=\"box\"&gt;&lt;img src=\"snapshot/"
-					+ this.formatDate(nowDate)
-					+ ".jpg\" height=\"530\" width=\"1024\" onmousewheel=\"return bigimg(this)\" alt=\"\" /&gt;"
-					+ "&lt;span&gt;滚动鼠标缩放大小,点击X关闭当前图片，返回报表界面."
-					+ "&lt;br /&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;"
-					+ "&lt;/b&gt;"
-					+ "&lt;/b&gt;"
-					+ " &lt;/a&gt;\n&lt;/br&gt;"
-					+ "&lt;div id=\"close\"&gt;&lt;/div&gt;\n");
-			log.info(this.formatDate(nowDate));
+//			Assertion.messageList.add("&lt;a class=\"clickbox\" href=\"#url\"&gt;\n"
+//					+ "&lt;img src=\"snapshot/"
+//					+ this.formatDate(nowDate)
+//					+ ".jpg\" height=\"100\" width=\"100\" alt=\"\" /&gt;\n"
+//					+ "&lt;b class=\"lightbox\"&gt;\n"
+//					+ "&lt;b class=\"light\"&gt;&lt;/b&gt;\n"
+//					+ "&lt;b class=\"box\"&gt;\n"
+//					+ "&lt;img src=\"snapshot/"
+//					+ this.formatDate(nowDate)
+//					+ ".jpg\" height=\"530\" width=\"1024\" onmousewheel=\"return bigimg(this)\" alt=\"\" /&gt;\n"
+//					+ "&lt;span&gt;滚动鼠标缩放大小,点击X关闭当前图片，返回报表界面.&lt;br /&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;\n"
+//					+ "&lt;/b&gt;\n"
+//					+ "&lt;/b&gt;\n"
+//					+ "&lt;/a&gt;\n"
+//					+ "&lt;br class=\"clear\" /&gt;\n"
+//					+"&lt;a class=\"clickbox\" href=\"#url\"&gt;"
+//					+ "点击查看大图"
+//					+ "&lt;b class=\"lightbox\"&gt;"
+//					+ "&lt;b class=\"light\"&gt;&lt;/b&gt;"
+//					+ "&lt;b class=\"box\"&gt;&lt;img src=\"snapshot/"
+//					+ this.formatDate(nowDate)
+//					+ ".jpg\" height=\"530\" width=\"1024\" onmousewheel=\"return bigimg(this)\" alt=\"\" /&gt;"
+//					+ "&lt;span&gt;滚动鼠标缩放大小,点击X关闭当前图片，返回报表界面."
+//					+ "&lt;br /&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;"
+//					+ "&lt;/b&gt;"
+//					+ "&lt;/b&gt;"
+//					+ " &lt;/a&gt;\n&lt;/br&gt;"
+//					+ "&lt;div id=\"close\"&gt;&lt;/div&gt;\n");
+//			log.info(this.formatDate(nowDate));
 			//Assertion.assertInfolList.add(arg0)
 			return webElements;
 		}
@@ -231,34 +266,35 @@ public class ElementAction extends TestBaseCase{
 			Date nowDate=new Date();
 			screenShot.setscreenName(this.formatDate(nowDate));
 			screenShot.takeScreenshot();
-			Assertion.messageList.add("&lt;a class=\"clickbox\" href=\"#url\"&gt;\n"
-					+ "&lt;img src=\"snapshot/"
-					+ this.formatDate(nowDate)
-					+ ".jpg\" height=\"100\" width=\"100\" alt=\"\" /&gt;\n"
-					+ "&lt;b class=\"lightbox\"&gt;\n"
-					+ "&lt;b class=\"light\"&gt;&lt;/b&gt;\n"
-					+ "&lt;b class=\"box\"&gt;\n"
-					+ "&lt;img src=\"snapshot/"
-					+ this.formatDate(nowDate)
-					+ ".jpg\" height=\"530\" width=\"1024\" onmousewheel=\"return bigimg(this)\" alt=\"\" /&gt;\n"
-					+ "&lt;span&gt;滚动鼠标缩放大小,点击X关闭当前图片，返回报表界面.&lt;br /&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;\n"
-					+ "&lt;/b&gt;\n"
-					+ "&lt;/b&gt;\n"
-					+ "&lt;/a&gt;\n"
-					+ "&lt;br class=\"clear\" /&gt;\n"
-					+"&lt;a class=\"clickbox\" href=\"#url\"&gt;"
-					+ "点击查看大图"
-					+ "&lt;b class=\"lightbox\"&gt;"
-					+ "&lt;b class=\"light\"&gt;&lt;/b&gt;"
-					+ "&lt;b class=\"box\"&gt;&lt;img src=\"snapshot/"
-					+ this.formatDate(nowDate)
-					+ ".jpg\" height=\"530\" width=\"1024\" onmousewheel=\"return bigimg(this)\" alt=\"\" /&gt;"
-					+ "&lt;span&gt;滚动鼠标缩放大小,点击X关闭当前图片，返回报表界面."
-					+ "&lt;br /&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;"
-					+ "&lt;/b&gt;"
-					+ "&lt;/b&gt;"
-					+ " &lt;/a&gt;\n&lt;/br&gt;"
-					+ "&lt;div id=\"close\"&gt;&lt;/div&gt;\n");
+			Assertion.messageList.add(screenshotMessage(this.formatDate(nowDate)));
+//			Assertion.messageList.add("&lt;a class=\"clickbox\" href=\"#url\"&gt;\n"
+//					+ "&lt;img src=\"snapshot/"
+//					+ this.formatDate(nowDate)
+//					+ ".jpg\" height=\"100\" width=\"100\" alt=\"\" /&gt;\n"
+//					+ "&lt;b class=\"lightbox\"&gt;\n"
+//					+ "&lt;b class=\"light\"&gt;&lt;/b&gt;\n"
+//					+ "&lt;b class=\"box\"&gt;\n"
+//					+ "&lt;img src=\"snapshot/"
+//					+ this.formatDate(nowDate)
+//					+ ".jpg\" height=\"530\" width=\"1024\" onmousewheel=\"return bigimg(this)\" alt=\"\" /&gt;\n"
+//					+ "&lt;span&gt;滚动鼠标缩放大小,点击X关闭当前图片，返回报表界面.&lt;br /&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;\n"
+//					+ "&lt;/b&gt;\n"
+//					+ "&lt;/b&gt;\n"
+//					+ "&lt;/a&gt;\n"
+//					+ "&lt;br class=\"clear\" /&gt;\n"
+//					+"&lt;a class=\"clickbox\" href=\"#url\"&gt;"
+//					+ "点击查看大图"
+//					+ "&lt;b class=\"lightbox\"&gt;"
+//					+ "&lt;b class=\"light\"&gt;&lt;/b&gt;"
+//					+ "&lt;b class=\"box\"&gt;&lt;img src=\"snapshot/"
+//					+ this.formatDate(nowDate)
+//					+ ".jpg\" height=\"530\" width=\"1024\" onmousewheel=\"return bigimg(this)\" alt=\"\" /&gt;"
+//					+ "&lt;span&gt;滚动鼠标缩放大小,点击X关闭当前图片，返回报表界面."
+//					+ "&lt;br /&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;"
+//					+ "&lt;/b&gt;"
+//					+ "&lt;/b&gt;"
+//					+ " &lt;/a&gt;\n&lt;/br&gt;"
+//					+ "&lt;div id=\"close\"&gt;&lt;/div&gt;\n");
 			log.info(this.formatDate(nowDate));
 			return webElement;
 		}
@@ -274,34 +310,35 @@ public class ElementAction extends TestBaseCase{
 			Date nowDate=new Date();
 			screenShot.setscreenName(this.formatDate(nowDate));
 			screenShot.takeScreenshot();
-			Assertion.messageList.add("&lt;a class=\"clickbox\" href=\"#url\"&gt;\n"
-					+ "&lt;img src=\"snapshot/"
-					+ this.formatDate(nowDate)
-					+ ".jpg\" height=\"100\" width=\"100\" alt=\"\" /&gt;\n"
-					+ "&lt;b class=\"lightbox\"&gt;\n"
-					+ "&lt;b class=\"light\"&gt;&lt;/b&gt;\n"
-					+ "&lt;b class=\"box\"&gt;\n"
-					+ "&lt;img src=\"snapshot/"
-					+ this.formatDate(nowDate)
-					+ ".jpg\" height=\"530\" width=\"1024\" onmousewheel=\"return bigimg(this)\" alt=\"\" /&gt;\n"
-					+ "&lt;span&gt;滚动鼠标缩放大小,点击X关闭当前图片，返回报表界面.&lt;br /&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;\n"
-					+ "&lt;/b&gt;\n"
-					+ "&lt;/b&gt;\n"
-					+ "&lt;/a&gt;\n"
-					+ "&lt;br class=\"clear\" /&gt;\n"
-					+"&lt;a class=\"clickbox\" href=\"#url\"&gt;"
-					+ "点击查看大图"
-					+ "&lt;b class=\"lightbox\"&gt;"
-					+ "&lt;b class=\"light\"&gt;&lt;/b&gt;"
-					+ "&lt;b class=\"box\"&gt;&lt;img src=\"snapshot/"
-					+ this.formatDate(nowDate)
-					+ ".jpg\" height=\"530\" width=\"1024\" onmousewheel=\"return bigimg(this)\" alt=\"\" /&gt;"
-					+ "&lt;span&gt;滚动鼠标缩放大小,点击X关闭当前图片，返回报表界面."
-					+ "&lt;br /&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;"
-					+ "&lt;/b&gt;"
-					+ "&lt;/b&gt;"
-					+ " &lt;/a&gt;\n&lt;/br&gt;"
-					+ "&lt;div id=\"close\"&gt;&lt;/div&gt;\n");
+			Assertion.messageList.add(screenshotMessage(this.formatDate(nowDate)));
+//			Assertion.messageList.add("&lt;a class=\"clickbox\" href=\"#url\"&gt;\n"
+//					+ "&lt;img src=\"snapshot/"
+//					+ this.formatDate(nowDate)
+//					+ ".jpg\" height=\"100\" width=\"100\" alt=\"\" /&gt;\n"
+//					+ "&lt;b class=\"lightbox\"&gt;\n"
+//					+ "&lt;b class=\"light\"&gt;&lt;/b&gt;\n"
+//					+ "&lt;b class=\"box\"&gt;\n"
+//					+ "&lt;img src=\"snapshot/"
+//					+ this.formatDate(nowDate)
+//					+ ".jpg\" height=\"530\" width=\"1024\" onmousewheel=\"return bigimg(this)\" alt=\"\" /&gt;\n"
+//					+ "&lt;span&gt;滚动鼠标缩放大小,点击X关闭当前图片，返回报表界面.&lt;br /&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;\n"
+//					+ "&lt;/b&gt;\n"
+//					+ "&lt;/b&gt;\n"
+//					+ "&lt;/a&gt;\n"
+//					+ "&lt;br class=\"clear\" /&gt;\n"
+//					+"&lt;a class=\"clickbox\" href=\"#url\"&gt;"
+//					+ "点击查看大图"
+//					+ "&lt;b class=\"lightbox\"&gt;"
+//					+ "&lt;b class=\"light\"&gt;&lt;/b&gt;"
+//					+ "&lt;b class=\"box\"&gt;&lt;img src=\"snapshot/"
+//					+ this.formatDate(nowDate)
+//					+ ".jpg\" height=\"530\" width=\"1024\" onmousewheel=\"return bigimg(this)\" alt=\"\" /&gt;"
+//					+ "&lt;span&gt;滚动鼠标缩放大小,点击X关闭当前图片，返回报表界面."
+//					+ "&lt;br /&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;"
+//					+ "&lt;/b&gt;"
+//					+ "&lt;/b&gt;"
+//					+ " &lt;/a&gt;\n&lt;/br&gt;"
+//					+ "&lt;div id=\"close\"&gt;&lt;/div&gt;\n");
 			log.info(this.formatDate(nowDate));
 			return webElement;
 		}
@@ -317,34 +354,78 @@ public class ElementAction extends TestBaseCase{
 			Date nowDate=new Date();
 			screenShot.setscreenName(this.formatDate(nowDate));
 			screenShot.takeScreenshot();
-			Assertion.messageList.add("&lt;a class=\"clickbox\" href=\"#url\"&gt;\n"
-					+ "&lt;img src=\"snapshot/"
-					+ this.formatDate(nowDate)
-					+ ".jpg\" height=\"100\" width=\"100\" alt=\"\" /&gt;\n"
-					+ "&lt;b class=\"lightbox\"&gt;\n"
-					+ "&lt;b class=\"light\"&gt;&lt;/b&gt;\n"
-					+ "&lt;b class=\"box\"&gt;\n"
-					+ "&lt;img src=\"snapshot/"
-					+ this.formatDate(nowDate)
-					+ ".jpg\" height=\"530\" width=\"1024\" onmousewheel=\"return bigimg(this)\" alt=\"\" /&gt;\n"
-					+ "&lt;span&gt;滚动鼠标缩放大小,点击X关闭当前图片，返回报表界面.&lt;br /&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;\n"
-					+ "&lt;/b&gt;\n"
-					+ "&lt;/b&gt;\n"
-					+ "&lt;/a&gt;\n"
-					+ "&lt;br class=\"clear\" /&gt;\n"
-					+"&lt;a class=\"clickbox\" href=\"#url\"&gt;"
-					+ "点击查看大图"
-					+ "&lt;b class=\"lightbox\"&gt;"
-					+ "&lt;b class=\"light\"&gt;&lt;/b&gt;"
-					+ "&lt;b class=\"box\"&gt;&lt;img src=\"snapshot/"
-					+ this.formatDate(nowDate)
-					+ ".jpg\" height=\"530\" width=\"1024\" onmousewheel=\"return bigimg(this)\" alt=\"\" /&gt;"
-					+ "&lt;span&gt;滚动鼠标缩放大小,点击X关闭当前图片，返回报表界面."
-					+ "&lt;br /&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;"
-					+ "&lt;/b&gt;"
-					+ "&lt;/b&gt;"
-					+ " &lt;/a&gt;\n&lt;/br&gt;"
-					+ "&lt;div id=\"close\"&gt;&lt;/div&gt;\n");
+			Assertion.messageList.add(screenshotMessage(this.formatDate(nowDate)));
+//			Assertion.messageList.add("&lt;a class=\"clickbox\" href=\"#url\"&gt;\n"
+//					+ "&lt;img src=\"snapshot/"
+//					+ this.formatDate(nowDate)
+//					+ ".jpg\" height=\"100\" width=\"100\" alt=\"\" /&gt;\n"
+//					+ "&lt;b class=\"lightbox\"&gt;\n"
+//					+ "&lt;b class=\"light\"&gt;&lt;/b&gt;\n"
+//					+ "&lt;b class=\"box\"&gt;\n"
+//					+ "&lt;img src=\"snapshot/"
+//					+ this.formatDate(nowDate)
+//					+ ".jpg\" height=\"530\" width=\"1024\" onmousewheel=\"return bigimg(this)\" alt=\"\" /&gt;\n"
+//					+ "&lt;span&gt;滚动鼠标缩放大小,点击X关闭当前图片，返回报表界面.&lt;br /&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;\n"
+//					+ "&lt;/b&gt;\n"
+//					+ "&lt;/b&gt;\n"
+//					+ "&lt;/a&gt;\n"
+//					+ "&lt;br class=\"clear\" /&gt;\n"
+//					+"&lt;a class=\"clickbox\" href=\"#url\"&gt;"
+//					+ "点击查看大图"
+//					+ "&lt;b class=\"lightbox\"&gt;"
+//					+ "&lt;b class=\"light\"&gt;&lt;/b&gt;"
+//					+ "&lt;b class=\"box\"&gt;&lt;img src=\"snapshot/"
+//					+ this.formatDate(nowDate)
+//					+ ".jpg\" height=\"530\" width=\"1024\" onmousewheel=\"return bigimg(this)\" alt=\"\" /&gt;"
+//					+ "&lt;span&gt;滚动鼠标缩放大小,点击X关闭当前图片，返回报表界面."
+//					+ "&lt;br /&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;"
+//					+ "&lt;/b&gt;"
+//					+ "&lt;/b&gt;"
+//					+ " &lt;/a&gt;\n&lt;/br&gt;"
+//					+ "&lt;div id=\"close\"&gt;&lt;/div&gt;\n");
+			log.info(this.formatDate(nowDate));
+			return webElement;
+		}catch (Exception e)
+		{
+			log.info("其他异常"+e.getMessage());
+			e.printStackTrace();
+			Assertion.assertInfolList.add("failed,其他异常：["+locator.getBy()+":"+locator.getElement()+"等待:"+locator.getWaitSec());
+			noSuchElementExceptions.add(e);
+			Assertion.messageList.add("其他异常["+locator.getElement()+"]:failed");
+			ScreenShot screenShot=new ScreenShot(driver);
+			//设置截图名字
+			Date nowDate=new Date();
+			screenShot.setscreenName(this.formatDate(nowDate));
+			screenShot.takeScreenshot();
+			Assertion.messageList.add(screenshotMessage(this.formatDate(nowDate)));
+//			Assertion.messageList.add("&lt;a class=\"clickbox\" href=\"#url\"&gt;\n"
+//					+ "&lt;img src=\"snapshot/"
+//					+ this.formatDate(nowDate)
+//					+ ".jpg\" height=\"100\" width=\"100\" alt=\"\" /&gt;\n"
+//					+ "&lt;b class=\"lightbox\"&gt;\n"
+//					+ "&lt;b class=\"light\"&gt;&lt;/b&gt;\n"
+//					+ "&lt;b class=\"box\"&gt;\n"
+//					+ "&lt;img src=\"snapshot/"
+//					+ this.formatDate(nowDate)
+//					+ ".jpg\" height=\"530\" width=\"1024\" onmousewheel=\"return bigimg(this)\" alt=\"\" /&gt;\n"
+//					+ "&lt;span&gt;滚动鼠标缩放大小,点击X关闭当前图片，返回报表界面.&lt;br /&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;\n"
+//					+ "&lt;/b&gt;\n"
+//					+ "&lt;/b&gt;\n"
+//					+ "&lt;/a&gt;\n"
+//					+ "&lt;br class=\"clear\" /&gt;\n"
+//					+"&lt;a class=\"clickbox\" href=\"#url\"&gt;"
+//					+ "点击查看大图"
+//					+ "&lt;b class=\"lightbox\"&gt;"
+//					+ "&lt;b class=\"light\"&gt;&lt;/b&gt;"
+//					+ "&lt;b class=\"box\"&gt;&lt;img src=\"snapshot/"
+//					+ this.formatDate(nowDate)
+//					+ ".jpg\" height=\"530\" width=\"1024\" onmousewheel=\"return bigimg(this)\" alt=\"\" /&gt;"
+//					+ "&lt;span&gt;滚动鼠标缩放大小,点击X关闭当前图片，返回报表界面."
+//					+ "&lt;br /&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;"
+//					+ "&lt;/b&gt;"
+//					+ "&lt;/b&gt;"
+//					+ " &lt;/a&gt;\n&lt;/br&gt;"
+//					+ "&lt;div id=\"close\"&gt;&lt;/div&gt;\n");
 			log.info(this.formatDate(nowDate));
 			return webElement;
 		}
