@@ -131,7 +131,7 @@ public class TestBaseCase {
 				//driver= new RemoteWebDriver(new URL("http://192.168.0.205:4455/wd/hub"), capabilities);
 				driver= new RemoteWebDriver(new URL(nodeURL), capabilities);
 				break;
-			case "ChormeDriver":
+			case "ChromeDriver":
 				// System.setProperty("webdriver.chrome.driver", "E:\\autotest\\autotmaiton\\resource\\chromedriver.exe");
 				//driver=new ChromeDriver();
 				DesiredCapabilities dcchorme=DesiredCapabilities.chrome();
