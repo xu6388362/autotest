@@ -34,7 +34,7 @@ public class Config {
 
 			}
 			else if (driver.equalsIgnoreCase("谷歌浏览器")) {
-				driver="ChormeDriver";
+				driver="ChromeDriver";
 				Node_Url=Node_Url+":3166";
 			}
 			else if(driver.equalsIgnoreCase("IE9浏览器")) {
