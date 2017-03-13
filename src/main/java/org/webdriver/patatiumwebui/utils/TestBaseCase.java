@@ -77,11 +77,11 @@ public class TestBaseCase {
 				this.driver=new FirefoxDriver(firefoxProfile);
 				break;
 			case "ChromeDriver":
-				System.setProperty("webdriver.chrome.driver", "src\\main\\resource\\webdriver\\chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\chromedriver.exe");
 				this.driver=new ChromeDriver();
 				break;
 			case "InternetExplorerDriver":
-				System.setProperty("webdriver.ie.driver", "src\\main\\resource\\webdriver\\IEDriverServer.exe");
+				System.setProperty("webdriver.ie.driver", "src\\main\\resources\\IEDriverServer.exe");
 				DesiredCapabilities dc = DesiredCapabilities.internetExplorer();
 				dc.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
 				dc.setCapability("ignoreProtectedModeSettings", true);
