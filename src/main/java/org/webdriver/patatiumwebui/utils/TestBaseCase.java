@@ -74,23 +74,14 @@ public class TestBaseCase {
 			case "FirefoxDriver" :
 				System.setProperty("webdriver.firefox.bin", "C:/Program Files (x86)/Mozilla Firefox/firefox.exe");
 				FirefoxProfile firefoxProfile=new FirefoxProfile();
-				//设置默认下载路径
-				firefoxProfile.setPreference("browser.download.folderList", 2);
-				firefoxProfile.setPreference("browser.download.dir", "D:\\自动化测试下载文件");
-				//加载firebug插件
-				firefoxProfile.setPreference("extensions.firebug.currentVersion", "2.0.13");
-				firefoxProfile.setPreference("extensions.firebug.allPagesActivation", "none");
-				//加载firepath插件
-				firefoxProfile.setPreference("extensions.firepath.currentVersion", "0.9.7.1.1");
-				firefoxProfile.setPreference("extensions.firepath.allPagesActivation", "on");
 				this.driver=new FirefoxDriver(firefoxProfile);
 				break;
 			case "ChromeDriver":
-				System.setProperty("webdriver.chrome.driver", "resource\\chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver", "src\\main\\resource\\webdriver\\chromedriver.exe");
 				this.driver=new ChromeDriver();
 				break;
 			case "InternetExplorerDriver":
-				System.setProperty("webdriver.ie.driver", "resource\\IEDriverServer_Win32_2.48.0\\IEDriverServer.exe");
+				System.setProperty("webdriver.ie.driver", "src\\main\\resource\\webdriver\\IEDriverServer.exe");
 				DesiredCapabilities dc = DesiredCapabilities.internetExplorer();
 				dc.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
 				dc.setCapability("ignoreProtectedModeSettings", true);
@@ -114,17 +105,6 @@ public class TestBaseCase {
 		{
 
 			case "FirefoxDriver" :
-				// System.setProperty("webdriver.firefox.bin", "C:/Program Files (x86)/Mozilla Firefox/firefox.exe");
-				// FirefoxProfile firefoxProfile=new FirefoxProfile();
-				// //设置默认下载路径
-				// firefoxProfile.setPreference("browser.download.folderList", 2);
-				// firefoxProfile.setPreference("browser.download.dir", "D:\\自动化测试下载文件");
-				// //加载firebug插件
-				// firefoxProfile.setPreference("extensions.firebug.currentVersion", "2.0.13");
-				// firefoxProfile.setPreference("extensions.firebug.allPagesActivation", "none");
-				// //加载firepath插件
-				// firefoxProfile.setPreference("extensions.firepath.currentVersion", "0.9.7.1.1");
-				// firefoxProfile.setPreference("extensions.firepath.allPagesActivation", "on");
 				DesiredCapabilities capabilities=DesiredCapabilities.firefox();
 				capabilities.setBrowserName("firefox");
 				capabilities.setPlatform(Platform.WINDOWS);
@@ -141,7 +121,6 @@ public class TestBaseCase {
 				driver=new RemoteWebDriver(new URL(nodeURL), dcchorme);
 				break;
 			case "InternetExplorerDriver-8":
-				// System.setProperty("webdriver.ie.driver", "E:\\autotest\\autotmaiton\\resource\\IEDriverServer_Win32_2.48.0\\IEDriverServer.exe");
 				DesiredCapabilities dc = DesiredCapabilities.internetExplorer();
 				dc.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
 				dc.setCapability("ignoreProtectedModeSettings", true);
@@ -151,7 +130,6 @@ public class TestBaseCase {
 				driver= new RemoteWebDriver(new URL(nodeURL), dc);
 				break;
 			case "InternetExplorerDriver-9":
-				// System.setProperty("webdriver.ie.driver", "E:\\autotest\\autotmaiton\\resource\\IEDriverServer_x64_2.48.0\\IEDriverServer.exe");
 				DesiredCapabilities dc2 = DesiredCapabilities.internetExplorer();
 				dc2.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
 				dc2.setCapability("ignoreProtectedModeSettings", true);
