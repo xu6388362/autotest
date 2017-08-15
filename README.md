@@ -51,7 +51,8 @@
 </map>
 ```
 对象库文件编写后，运行/src/main/java/org/webdriver/patatiumwebui/PageObjectConfig/PageObjectAutoCode.java 文件生成对象库java代码
-<h2>2、公共action封装实例（业务操作）</h2>
+### 2、公共action封装实例（业务操作）
+
 ```
 package org.webdriver.patatiumwebui.action;
 
