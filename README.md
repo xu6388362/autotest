@@ -231,7 +231,8 @@ testng.xml放在项目根目录下面。
 IDE：在IDE集成开发环境下右键testng.xml使用testng运行
 Maven:执行mvn clean ;mvn test 命令
 Jenkins：1、checkout 项目代码 2、指定pom.xml文件  3、执行mvn clean ;mvn test 命令
-<h2>7、查看测试报告及日志文件</h2>
+### 7、查看测试报告及日志文件
+
 用例执行完毕，会自动发送邮件报告及生成测试报告文件；用例失败会自动截图并将其展示在报告中，也可以将用例失败堆栈信息显示到报表中
 测试报告文件生成在项目根目录下test-out目录下report.html文件
 报告展示如下：
@@ -279,7 +280,8 @@ Contains();//input[contains(@id,'nt')] 模糊匹配，查找id包含nt的input�
 
 综上xpath定位原则，元素id,name属性优先使用，其次是class等其他，1、在当前节点没有id,name等属性确定元素唯一性的时候，往上找，通过当前节点父亲，祖父，祖父的父亲，祖父的祖父等节点查找当前元素。2、一个元素属性不足够定位当前元素的时候，可以通过and运算符，组合属性来定位使之达到唯一性，尽可能的缩短xpath层级，使xpath定位更稳定。
 
-<h1>Firebug使用：</h1>
+### Firebug使用：
+
 例：
 定位用户名输入框可以用//*[@id=’userName’]表示查找当前页面下，id属性为’userName’的所有元素，相当于id定位方式。*代表所有元素。
 ![输入图片说明](http://git.oschina.net/uploads/images/2016/0829/141110_462d5c6d_482055.png "在这里输入图片标题")
