@@ -4,18 +4,18 @@
  **这是一个WebUI自动化测试框架，由<a href="http://www.webdriver.org">webdriver中文社区</a>创办人土豆(本人技术笔名)所创建,该web自动化测试框架是用java语言编写的，基于selenium webdriver 的开源自动化测试框架，该框架结合了testng,selenium,webdriver，jxl，jodd-http 等工具。该框架基于页面对象模型（POM）架构，实现了关键字驱动技术，数据驱动,无需掌握多少编程知识即可编写脚本，同时实现了数据与代码分离的功能：1、元素定位信息保存在对象库文件中 2、测试用例数据可以存储在excel中。从而实现，页面元素位置变化，无需改动脚本，只需修改对应的元素定位信息即可。
      该框架实现了检查点及用例失败自动截图功能，自动生成html测试报告及自动发送html邮件测试报告功能。
      目前框架还不是特别完善，还需要写一些脚本实现自动化；学习该框架需要熟悉一定的HTML 和java基础，后续可以考虑自动编码的实现。**
-### <h1>环境配置</h1>
+### 环境配置
 
 1、jdk 1.8
 2、idea/eclipse
 3、maven
-### <h1>注意事项</h1>
+### 注意事项
 
 工程项目编码需要设置为UTF-8否则会出现中文乱码情况
-### <h1>API文档</h1>
+### API文档
 
 <a href="http://www.webdriver.org/doc/patatiumwebui/api/">点击查看API文档</a>
-### <h1>实现的功能</h1>
+### 实现的功能
 
  1、XML管理元素对象信息
  2、统一的操作API风格，action.操作(某个页面.某个元素（）)
@@ -24,9 +24,9 @@
  5、用例失败自动截图并展示到报表中
  6、自动生成html报表，自动发送html邮件报告
  7、用例串行一次性执行多个浏览器，可用于兼容性测试
-### <h1>Demo演示</h1>
+### Demo演示
 
-### <h2>1、对象库文件编写(文件名定义为UILibrary.xml)</h2>
+### 1、对象库文件编写(文件名定义为UILibrary.xml)
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -82,7 +82,8 @@ public class LoginAction extends TestBaseCase{
 
 ```
 公共Action代码放在src/main/java/org/webdriver/patatiumwebui/Action 包下
-<h2>3、驱动数据来源实例</h2>
+### 3、驱动数据来源实例
+
 1、在src/main/resources/data下创建loginData.xls文件
 编写如下内容
 ![输入图片说明](http://git.oschina.net/uploads/images/2016/0829/123627_cb6607c8_482055.png "在这里输入图片标题")
@@ -222,7 +223,8 @@ public class LoginAction extends TestBaseCase{
 </suite> <!-- Suite -->
 ```
 testng.xml放在项目根目录下面。
-<h2>6、执行用例</h2>
+### 6、执行用例
+
 IDE：在IDE集成开发环境下右键testng.xml使用testng运行
 Maven:执行mvn clean ;mvn test 命令
 Jenkins：1、checkout 项目代码 2、指定pom.xml文件  3、执行mvn clean ;mvn test 命令
