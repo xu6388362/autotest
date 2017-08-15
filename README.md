@@ -260,8 +260,6 @@ Contains();//input[contains(@id,'nt')] 模糊匹配，查找id包含nt的input�
 查找元素
 ```
 <span class=”cde”>八佰伴</span>
-```
-```
 <span class=”cde”>嘎嘎嘎</span>
 <div id=”abc”>
    <form>
@@ -290,7 +288,8 @@ Contains();//input[contains(@id,'nt')] 模糊匹配，查找id包含nt的input�
 ```
 GPL V2.0
 ```
-<h3>如果您觉得这个产品对您有用，您可以捐助下我，让我有理由继续下去，非常感谢。</h3>
+### 如果您觉得这个产品对您有用，您可以捐助下我，让我有理由继续下去，非常感谢。
+
 ![输入图片说明](http://git.oschina.net/uploads/images/2016/0829/144253_111773ec_482055.jpeg "在这里输入图片标题")
 <h3>您也可以加入webdriver中文社区交流QQ群： 471137382，欢迎给我提建议和bug。
 或者给我邮件：609958331@qq.com
