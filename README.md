@@ -242,7 +242,8 @@ Jenkins：1、checkout 项目代码 2、指定pom.xml文件  3、执行mvn clean
 日志文件展示如下：
 ![输入图片说明](http://git.oschina.net/uploads/images/2016/0829/140857_d1524893_482055.png "在这里输入图片标题")
 
-<h1>Xpath 详解：</h1>
+### Xpath 详解：
+
 注：可通过火狐浏览器安装,firebug,firepath插件校验xpath的正确性
 先举个xpah例子://div[@id=’abc’]/form/div/input/span
 //：从匹配选择的当前节点，选择文档中的节点，不考虑它的具体位置，例如：//div[@name=‘abc’]
