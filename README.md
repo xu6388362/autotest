@@ -129,7 +129,8 @@ public class LoginAction extends TestBaseCase{
 	//数据驱动案例--end
 ```
 测试用例代码放在src/test/java 包下
-<h2>5、testng.xml配置</h2>
+### 5、testng.xml配置
+
 普通串行执行配置（只用一个浏览器跑用例）
 ```
 <?xml version="1.0" encoding="utf-8"?>
